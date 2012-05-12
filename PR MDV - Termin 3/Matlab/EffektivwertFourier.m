@@ -15,5 +15,5 @@ function RMSif = EffektivwertFourier(xt)
 % output:             RMSIf: Effektivwert des Signals , berechnet aus den
 %                     Fourierkoeffizienten
  
-
-RMSif = sqrt(mean(length(xt)*(xt.*xt)));
+xf = abs(fftshift(fft(xt)));
+RMSif = sqrt(mean(1/length(xt)*(xf.*xf)));

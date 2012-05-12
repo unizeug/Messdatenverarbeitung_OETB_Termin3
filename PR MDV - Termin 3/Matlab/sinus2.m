@@ -1,4 +1,8 @@
-id=5; %[A]
+Ueff=230;
+Upeek=325;
+R=1320;
+
+id=Upeek/R; %[A]
 %Phasenverschiebung
  phi = pi/3;
 %frequenz[Hz]
@@ -13,6 +17,7 @@ alpha=4/8*pi;
 % it = id*sin(2*pi*f*t + phi);
 it = stromPhasSchnitt (id,f,alpha,t);
 RMSit = EffektivwertZeitbereich(it)
+RMSif = EffektivwertFourier(it)
 
 %figure(2)
 %Zeichnen der Funktion
@@ -27,7 +32,7 @@ y_DFT_abs = (abs(y_DFT)/N);
 %Phasenspektrum
 y_DFT_phase = unwrap(angle(y_DFT)/N);
 
-RMSif = EffektivwertFourier(y_DFT_abs)
+
 
 %Zeitachse
 %t = T_ges*(0:(N-1))/(N-1);
