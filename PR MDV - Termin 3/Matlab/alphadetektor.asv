@@ -1,0 +1,45 @@
+function alpha=alphadetektor(uc, f, samplerate, numofsample)
+%function i = stromPhasSchnitt(id,f,alpha,t)
+%---------------------------------------------------
+% filename:         stromPhasSchnitt
+% author:           Özgü Dogan, Timo Lausen, Boris Henckell
+% organisation:     TU Berlin
+% project:          MDVPR
+% date:             09.05.2012
+%---------------------------------------------------
+% description : simuliert einen mit dem Winkel alpha angeschnittenen Strom
+% input :
+% uc        - Code der gemessenen Spannung
+% f         - Frequenz des Stroms
+% t         - Vektor mit den Zeitpunkten zu denen der Strom simuliert wird
+% phi       - Phasenverschiebung
+
+% output : [ alpha ] anschnittwinkel
+%---------------------------------------------------
+
+%Zeitvektor erstellen
+t=1:1/samplerate:numofsample/samplerate-1;
+t=1:176:1.12;
+%Zeit einer Periode [s]
+T_periode = 1/f;
+
+%Spannungvektor von Code zu Volt umrechnen
+ut = Code2Volt(uc);
+
+%Stomvektor aus dem vorhandenen Spannungsvektor bestimmen
+it = 0.09*ut;
+
+%Schleife über alle Abtastwerte
+
+k=1;
+
+while  k<length(t)
+%    t_rel = mod(t(k),T_periode/2);
+    if (abs(it(k)) < 0.01)
+        k=k+1;
+    else
+        k=length(t)+1;
+    end;
+alpha = k/(T_periode/(2*samplerate)) * pi;
+        
+end;
