@@ -17,204 +17,211 @@
 
 \section{Vorbereitungsaufgaben}
 \begin{quote}
-    \subsection{Sinusfunktion erzeugen und DFT erstellen}
+    \subsection{Vorbereitungsaufgaben Termin 3}
     \begin{quote}
-        siehe Quelltext sinus2.m im Anhang
-        \begin{figure}[H]
-        \centering
-            \includegraphics[scale=0.5, trim = 0cm 0cm 0cm 0cm, clip]{./Bilder/VerschobenerSinusAufgabe1}
-                \caption{Verschobener Sinus}
-                \label{fig:./Bilder/VerschobenerSinusAufgabe1}
-        \end{figure}
-    
-    \end{quote}
-    
-	\subsection{Angeschnittene Sinusfunktion}
-    \begin{quote}
-        Siehe Quelltext stromPhasSchnitt.m im Anhang\\
-        Um diese Funktion zu erstellen haben wir eine for Schleife imlementiert, die den gesamten zeitvektor t
-        durchläuft. Für jeden Durchlauf wird getestet, wo sich der jeweilige Zeitpunkt im Verhältniss zum halben
-        sinussignal befindet. Anschließend wird in der if abfrage bestimmt, ob sich dieser Zeitpunkt relativ zur halben
-        Periode des Sinussignals vor oder hinter dem Phasenanschnittswinkel befindet. Abhängig davon wird der
-        dentsprechenden Stelle im Ausgabevektor der Wert $0$ oder der Wert den die Sinusfunktion ermittelt, übergeben.\\
-        Für die Phasenanschnittswinkel. $ \alpha = 0, \frac{1}{8} \pi, \frac{1}{4} \pi, \frac{3}{8} \pi, \frac{1}{2}
-        \pi,\frac{5}{8} \pi, \frac{3}{4} \pi, \frac{7}{8} \pi$ und $\pi$ ergeben sich folgende 
-    \end{quote}
-    
-    \subsection{Effektivwert des Stroms im Zeitbereich}
-    \begin{quote}
-        Siehe Quelltext EffektivwertZeitbereich.m im Anhang\\
-        Für den Effektivwert des Stroms im Zeitbereich ermitteln wir die Wurzel des Mittelwertes des Quadrats des
-        Stromvektors.
-    \end{quote}
-    
-    \subsection{Effektivwert des Stroms im Frequenzbereich}
-    \begin{quote}
-        Siehe Quelltext EffektivwertFourier.m im Anhang\\
-        Den Effektivwert des Stroms im Frequenzbereich ermitteln wir ähnlich wie den Effektivwert des Stroms im
-        Zeitbereich. Dank des Parsevalschen-Theorems \ldots
-        \end{quote}
-    \subsection{Ergebnisse Vorbereitungsaufgaben}
-    \begin{quote}
-                                %4 Grafiken:
-            \begin{center}
-            \begin{tabular}{ll}
-
-            \hspace{-11em}
-                \begin{minipage}{0.6\textwidth}
-
-                    \begin{figure}[H]
-                        \label{fig:}
-                        \includegraphics[scale=0.5, trim = 2cm 7cm 1.5cm 8.5cm, clip]{./Bilder/Phasenanschnitt08pi.pdf}
-                        %FIXME [width=640px,
-                         %height=474px]
-                        \caption{Sinussignal mit Phasenanschnitt von $0$}
-                    \end{figure}
-
-                \end{minipage}
-                \begin{minipage}{0.6\textwidth}
-
-                    \begin{figure}[H]
-                        \label{fig:}
-                        \includegraphics[scale=0.5, trim = 2cm 7cm 1.5cm 8.5cm, clip]{./Bilder/Phasenanschnitt18pi.pdf}
-                        %FIXME [width=640px,
-                         %height=474px]
-                        \caption{Sinussignal mit Phasenanschnitt von $\frac{1}{8}/pi$}
-                    \end{figure}
-                \vspace{-1.5em}
-
-                \end{minipage}
-
-            \end{tabular}
-            \end{center}
-
-                        %4 Grafiken:
-            \begin{center}
-            \begin{tabular}{ll}
-
-            \hspace{-11em}
-                \begin{minipage}{0.6\textwidth}
-
-                    \begin{figure}[H]
-                        \label{fig:}
-                        \includegraphics[scale=0.5, trim = 2cm 7cm 1.5cm 8.5cm, clip]{./Bilder/Phasenanschnitt28pi.pdf} %FIXME [width=640px,
-                        % height=474px]
-                        \caption{Sinussignal mit Phasenanschnitt von $\frac{1}{4}/pi$}
-                    \end{figure}
-
-                \end{minipage}
-                \begin{minipage}{0.6\textwidth}
-
-                     \begin{figure}[H]
-                        \label{fig:}
-                        \includegraphics[scale=0.5, trim = 2cm 7cm 1.5cm 8.5cm, clip]{./Bilder/Phasenanschnitt38pi.pdf} %FIXME [width=640px,
-                        % height=474px]
-                        \caption{Sinussignal mit Phasenanschnitt von $\frac{3}{8}/pi$}
-                    \end{figure}
-               \vspace{-1.5em}
-
-                \end{minipage}
-
-            \end{tabular}
-            \end{center}
-
-                        %4 Grafiken:
-            \begin{center}
-            \begin{tabular}{ll}
-
-            \hspace{-11em}
-                \begin{minipage}{0.6\textwidth}
-
-                    \begin{figure}[H]
-                        \label{fig:}
-                        \includegraphics[scale=0.5, trim = 2cm 7cm 1.5cm 8.5cm, clip]{./Bilder/Phasenanschnitt48pi.pdf} %FIXME [width=640px,
-                        % height=474px]
-                        \caption{Sinussignal mit Phasenanschnitt von $\frac{1}{2}/pi$}
-                    \end{figure}
-
-                \end{minipage}
-                \begin{minipage}{0.6\textwidth}
-
-                   \begin{figure}[H]
-                        \label{fig:}
-                        \includegraphics[scale=0.5, trim = 2cm 7cm 1.5cm 8.5cm, clip]{./Bilder/Phasenanschnitt58pi.pdf} %FIXME [width=640px,
-                        % height=474px]
-                        \caption{Sinussignal mit Phasenanschnitt von $\frac{5}{8}/pi$}
-                    \end{figure}
-                 \vspace{-1.5em}
-
-                \end{minipage}
-
-            \end{tabular}
-            \end{center}
-
-               %4 Grafiken:
-            \begin{center}
-            \begin{tabular}{ll}
-
-            \hspace{-11em}
-                \begin{minipage}{0.6\textwidth}
-
-                    \begin{figure}[H]
-                        \label{fig:}
-                        \includegraphics[scale=0.5, trim = 2cm 7cm 1.5cm 8.5cm, clip]{./Bilder/Phasenanschnitt68pi.pdf} %FIXME [width=640px,
-                        % height=474px]
-                        \caption{Sinussignal mit Phasenanschnitt von $\frac{3}{4}/pi$}
-                    \end{figure}
-
-                \end{minipage}
-                \begin{minipage}{0.6\textwidth}
-
-                   \begin{figure}[H]
-                        \label{fig:}
-                        \includegraphics[scale=0.5, trim = 2cm 7cm 1.5cm 8.5cm, clip]{./Bilder/Phasenanschnitt78pi.pdf} %FIXME [width=640px,
-                        % height=474px]
-                        \caption{Sinussignal mit Phasenanschnitt von $\frac{7}{8}/pi$}
-                    \end{figure}
-                 \vspace{-1.5em}
-
-                \end{minipage}
-
-            \end{tabular}
-            \end{center}
-            
-               %4 Grafiken:
-            \begin{center}
-            \begin{tabular}{ll}
-
-            \hspace{-4em}
-                \begin{minipage}{0.6\textwidth}
-
-                    \begin{figure}[H]
-                        \label{fig:}
-                        \includegraphics[scale=0.5, trim = 2cm 7cm 1.5cm 8.5cm, clip]{./Bilder/Phasenanschnitt88pi.pdf} %FIXME [width=640px,
-                        % height=474px]
-                        \caption{Sinussignal mit Phasenanschnitt von $/pi$}
-                    \end{figure}
-
-                \end{minipage}
-
-            \end{tabular}
-            \end{center}
-             \begin{center}
-                 \begin{tabular}{|c|c|c|}
-                             
-                   \hline
-                   $\alpha $ & $i_{eff}$ (Zeitbereich) & $i_{eff}$ Frequenzbereich\\ \hline
-                   $0$ & 3,5326 & 3,5326 \\ \hline
-                   $\frac{1}{8} \pi$ & 3,5105 & 3,5105 \\ \hline
-                   $\frac{1}{4} \pi$ & 3,3744 & 3,3744 \\ \hline
-                   $\frac{3}{8} \pi$ & 3,0338 & 3,0338 \\ \hline
-                   $\frac{1}{2} \pi$ & 2,5145 & 2,5145 \\ \hline
-                   $\frac{5}{8} \pi$ & 1,8097 & 1,8097 \\ \hline
-                   $\frac{3}{4} \pi$ & 1,0748 & 1,0748 \\ \hline
-                   $\frac{7}{8} \pi$ & 0,3940 & 0,3940 \\ \hline
-                   $ \pi$ & 0 & 0 \\ \hline
-                         
-           
-                 \end{tabular}
-             \end{center}        
+        \subsubsection{Sinusfunktion erzeugen und DFT erstellen}
+        \begin{quote}
+            Die erste Vorbereitungsaufgabe hatte das Ziel einen verschobenes Sinussignal zu erzeugen, die DFT davon zu
+            betimmen und dieses zu plotten. Der dazugehärige Quelltext sinus2.m befindet sich im Anhang.
+            \begin{figure}[H]
+            \centering
+                \includegraphics[scale=0.5, trim = 0cm 0cm 0cm 0cm, clip]{./Bilder/VerschobenerSinusAufgabe1}
+                    \caption{Verschobener Sinus}
+                    \label{fig:./Bilder/VerschobenerSinusAufgabe1}
+            \end{figure}
         
+        \end{quote}
+        
+    	\subsubsection{Angeschnittene Sinusfunktion}
+        \begin{quote}
+            In der zweiten Vorbereitungsaufgabe sollte eine Matlab-Funktion geschrieben werden die einen Sinusfunktion Siehe
+            Quelltext stromPhasSchnitt.m im Anhang\\
+            Um diese Funktion zu erstellen haben wir eine for Schleife imlementiert, die den gesamten zeitvektor t
+            durchläuft. Für jeden Durchlauf wird getestet, wo sich der jeweilige Zeitpunkt im Verhältniss zum halben
+            sinussignal befindet. Anschließend wird in der if abfrage bestimmt, ob sich dieser Zeitpunkt relativ zur halben
+            Periode des Sinussignals vor oder hinter dem Phasenanschnittswinkel befindet. Abhängig davon wird der
+            dentsprechenden Stelle im Ausgabevektor der Wert $0$ oder der Wert den die Sinusfunktion ermittelt, übergeben.\\
+            Für die Phasenanschnittswinkel. $ \alpha = 0, \frac{1}{8} \pi, \frac{1}{4} \pi, \frac{3}{8} \pi, \frac{1}{2}
+            \pi,\frac{5}{8} \pi, \frac{3}{4} \pi, \frac{7}{8} \pi$ und $\pi$ ergeben sich folgende 
+        \end{quote}
+        
+        \subsubsection{Effektivwert des Stroms im Zeitbereich}
+        \begin{quote}
+            Siehe Quelltext EffektivwertZeitbereich.m im Anhang\\
+            Für den Effektivwert des Stroms im Zeitbereich ermitteln wir die Wurzel des Mittelwertes des Quadrats des
+            Stromvektors.
+        \end{quote}
+        
+        \subsubsection{Effektivwert des Stroms im Frequenzbereich}
+        \begin{quote}
+            Siehe Quelltext EffektivwertFourier.m im Anhang\\
+            Den Effektivwert des Stroms im Frequenzbereich ermitteln wir ähnlich wie den Effektivwert des Stroms im
+            Zeitbereich. Dank des Parsevalschen-Theorems \ldots
+            \end{quote}
+        \subsubsection{Ergebnisse Vorbereitungsaufgaben}
+        \begin{quote}
+                                    %4 Grafiken:
+                \begin{center}
+                \begin{tabular}{ll}
+    
+                \hspace{-11em}
+                    \begin{minipage}{0.6\textwidth}
+    
+                        \begin{figure}[H]
+                            \label{fig:}
+                            \includegraphics[scale=0.5, trim = 2cm 7cm 1.5cm 8.5cm, clip]{./Bilder/Phasenanschnitt08pi.pdf}
+                            %FIXME [width=640px,
+                             %height=474px]
+                            \caption{Sinussignal mit Phasenanschnitt von $0$}
+                        \end{figure}
+    
+                    \end{minipage}
+                    \begin{minipage}{0.6\textwidth}
+    
+                        \begin{figure}[H]
+                            \label{fig:}
+                            \includegraphics[scale=0.5, trim = 2cm 7cm 1.5cm 8.5cm, clip]{./Bilder/Phasenanschnitt18pi.pdf}
+                            %FIXME [width=640px,
+                             %height=474px]
+                            \caption{Sinussignal mit Phasenanschnitt von $\frac{1}{8}/pi$}
+                        \end{figure}
+                    \vspace{-1.5em}
+    
+                    \end{minipage}
+    
+                \end{tabular}
+                \end{center}
+    
+                            %4 Grafiken:
+                \begin{center}
+                \begin{tabular}{ll}
+    
+                \hspace{-11em}
+                    \begin{minipage}{0.6\textwidth}
+    
+                        \begin{figure}[H]
+                            \label{fig:}
+                            \includegraphics[scale=0.5, trim = 2cm 7cm 1.5cm 8.5cm, clip]{./Bilder/Phasenanschnitt28pi.pdf} %FIXME [width=640px,
+                            % height=474px]
+                            \caption{Sinussignal mit Phasenanschnitt von $\frac{1}{4}/pi$}
+                        \end{figure}
+    
+                    \end{minipage}
+                    \begin{minipage}{0.6\textwidth}
+    
+                         \begin{figure}[H]
+                            \label{fig:}
+                            \includegraphics[scale=0.5, trim = 2cm 7cm 1.5cm 8.5cm, clip]{./Bilder/Phasenanschnitt38pi.pdf} %FIXME [width=640px,
+                            % height=474px]
+                            \caption{Sinussignal mit Phasenanschnitt von $\frac{3}{8}/pi$}
+                        \end{figure}
+                   \vspace{-1.5em}
+    
+                    \end{minipage}
+    
+                \end{tabular}
+                \end{center}
+    
+                            %4 Grafiken:
+                \begin{center}
+                \begin{tabular}{ll}
+    
+                \hspace{-11em}
+                    \begin{minipage}{0.6\textwidth}
+    
+                        \begin{figure}[H]
+                            \label{fig:}
+                            \includegraphics[scale=0.5, trim = 2cm 7cm 1.5cm 8.5cm, clip]{./Bilder/Phasenanschnitt48pi.pdf} %FIXME [width=640px,
+                            % height=474px]
+                            \caption{Sinussignal mit Phasenanschnitt von $\frac{1}{2}/pi$}
+                        \end{figure}
+    
+                    \end{minipage}
+                    \begin{minipage}{0.6\textwidth}
+    
+                       \begin{figure}[H]
+                            \label{fig:}
+                            \includegraphics[scale=0.5, trim = 2cm 7cm 1.5cm 8.5cm, clip]{./Bilder/Phasenanschnitt58pi.pdf} %FIXME [width=640px,
+                            % height=474px]
+                            \caption{Sinussignal mit Phasenanschnitt von $\frac{5}{8}/pi$}
+                        \end{figure}
+                     \vspace{-1.5em}
+    
+                    \end{minipage}
+    
+                \end{tabular}
+                \end{center}
+    
+                   %4 Grafiken:
+                \begin{center}
+                \begin{tabular}{ll}
+    
+                \hspace{-11em}
+                    \begin{minipage}{0.6\textwidth}
+    
+                        \begin{figure}[H]
+                            \label{fig:}
+                            \includegraphics[scale=0.5, trim = 2cm 7cm 1.5cm 8.5cm, clip]{./Bilder/Phasenanschnitt68pi.pdf} %FIXME [width=640px,
+                            % height=474px]
+                            \caption{Sinussignal mit Phasenanschnitt von $\frac{3}{4}/pi$}
+                        \end{figure}
+    
+                    \end{minipage}
+                    \begin{minipage}{0.6\textwidth}
+    
+                       \begin{figure}[H]
+                            \label{fig:}
+                            \includegraphics[scale=0.5, trim = 2cm 7cm 1.5cm 8.5cm, clip]{./Bilder/Phasenanschnitt78pi.pdf} %FIXME [width=640px,
+                            % height=474px]
+                            \caption{Sinussignal mit Phasenanschnitt von $\frac{7}{8}/pi$}
+                        \end{figure}
+                     \vspace{-1.5em}
+    
+                    \end{minipage}
+    
+                \end{tabular}
+                \end{center}
+                
+                   %4 Grafiken:
+                \begin{center}
+                \begin{tabular}{ll}
+    
+                \hspace{-4em}
+                    \begin{minipage}{0.6\textwidth}
+    
+                        \begin{figure}[H]
+                            \label{fig:}
+                            \includegraphics[scale=0.5, trim = 2cm 7cm 1.5cm 8.5cm, clip]{./Bilder/Phasenanschnitt88pi.pdf} %FIXME [width=640px,
+                            % height=474px]
+                            \caption{Sinussignal mit Phasenanschnitt von $/pi$}
+                        \end{figure}
+    
+                    \end{minipage}
+    
+                \end{tabular}
+                \end{center}
+                 \begin{center}
+                     \begin{tabular}{|c|c|c|}
+                                 
+                       \hline
+                       $\alpha $ & $i_{eff}$ (Zeitbereich) & $i_{eff}$ Frequenzbereich\\ \hline
+                       $0$ & 3,5326 & 3,5326 \\ \hline
+                       $\frac{1}{8} \pi$ & 3,5105 & 3,5105 \\ \hline
+                       $\frac{1}{4} \pi$ & 3,3744 & 3,3744 \\ \hline
+                       $\frac{3}{8} \pi$ & 3,0338 & 3,0338 \\ \hline
+                       $\frac{1}{2} \pi$ & 2,5145 & 2,5145 \\ \hline
+                       $\frac{5}{8} \pi$ & 1,8097 & 1,8097 \\ \hline
+                       $\frac{3}{4} \pi$ & 1,0748 & 1,0748 \\ \hline
+                       $\frac{7}{8} \pi$ & 0,3940 & 0,3940 \\ \hline
+                       $ \pi$ & 0 & 0 \\ \hline
+                             
+               
+                     \end{tabular}
+                 \end{center}        
+        \end{quote}
+    \end{quote}
+    \subsection{Vorbereitungsaufgaben Termin 4}
+    \begin{quote}
         
     \end{quote}
 \end{quote}
