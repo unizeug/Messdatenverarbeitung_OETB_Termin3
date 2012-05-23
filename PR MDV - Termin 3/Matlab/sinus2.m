@@ -15,10 +15,10 @@ t = (0:0.0001:T_ges);
 %numofsample=176;
 %t=1/samplerate:1/samplerate:numofsample/samplerate;
 %Phasenanschnittwinkel [rad]
-alpha=4/8*pi;
+alpha=8/8*pi;
 %Resultierende Stomfunktion
- it = id*sin(2*pi*f*t + phi);
-%it = stromPhasSchnitt (id,f,alpha,t);
+% it = id*sin(2*pi*f*t + phi);
+it = stromPhasSchnitt (id,f,alpha,t);
 %it = 0.09 * Code2Volt(Anschnitt_pi_2);
 RMSit = EffektivwertZeitbereich(it);
 RMSif = EffektivwertFourier(it);
