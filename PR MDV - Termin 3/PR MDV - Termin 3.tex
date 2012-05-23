@@ -34,29 +34,38 @@
         
     	\subsubsection{Angeschnittene Sinusfunktion}
         \begin{quote}
-            In der zweiten Vorbereitungsaufgabe sollte eine Matlab-Funktion geschrieben werden die einen Sinusfunktion Siehe
-            Quelltext stromPhasSchnitt.m im Anhang\\
+            In der zweiten Vorbereitungsaufgabe sollte eine Matlab-Funktion geschrieben werden die einen angeschnittene
+            Sinusfunktion simuliuliert.\\
             Um diese Funktion zu erstellen haben wir eine for Schleife imlementiert, die den gesamten zeitvektor t
             durchläuft. Für jeden Durchlauf wird getestet, wo sich der jeweilige Zeitpunkt im Verhältniss zum halben
             sinussignal befindet. Anschließend wird in der if abfrage bestimmt, ob sich dieser Zeitpunkt relativ zur halben
             Periode des Sinussignals vor oder hinter dem Phasenanschnittswinkel befindet. Abhängig davon wird der
             dentsprechenden Stelle im Ausgabevektor der Wert $0$ oder der Wert den die Sinusfunktion ermittelt, übergeben.\\
-            Für die Phasenanschnittswinkel. $ \alpha = 0, \frac{1}{8} \pi, \frac{1}{4} \pi, \frac{3}{8} \pi, \frac{1}{2}
-            \pi,\frac{5}{8} \pi, \frac{3}{4} \pi, \frac{7}{8} \pi$ und $\pi$ ergeben sich folgende 
+            Wir haben die Graphen für folgende Phasenanschnittswinkel $ \alpha = 0, \frac{1}{8} \pi, \frac{1}{4}
+            \pi, \frac{3}{8} \pi, \frac{1}{2} \pi,\frac{5}{8} \pi, \frac{3}{4} \pi, \frac{7}{8} \pi$ und $\pi$
+            geplottet.\\
+            Der dazugehärige Quelltext befindet sich im Anhang.
         \end{quote}
         
         \subsubsection{Effektivwert des Stroms im Zeitbereich}
         \begin{quote}
-            Siehe Quelltext EffektivwertZeitbereich.m im Anhang\\
             Für den Effektivwert des Stroms im Zeitbereich ermitteln wir die Wurzel des Mittelwertes des Quadrats des
-            Stromvektors.
+            Stromvektors.\\
+            Der dazugehörige Quelltext befindet sich im Anhang.
         \end{quote}
         
         \subsubsection{Effektivwert des Stroms im Frequenzbereich}
         \begin{quote}
-            Siehe Quelltext EffektivwertFourier.m im Anhang\\
             Den Effektivwert des Stroms im Frequenzbereich ermitteln wir ähnlich wie den Effektivwert des Stroms im
-            Zeitbereich. Dank des Parsevalschen-Theorems \ldots
+            Zeitbereich. Das Parsevalschen-Theorem besagt, dass die Energien eines Signals im Zeitbereich gleich seiner
+            Energie im Frequenzbereich ist.\cite{PasevalscheTheorem}\\
+            \begin{equation*}
+            	\begin{split}
+            		\sum_{n=0}^{N-1} |x[n]|^2 = \frac{1}{N} \sum_{k=0}^{N-1} |X[k]|^2
+            	\end{split}
+            \end{equation*}
+            
+            Der dazugehörige Quelltext befindet sich im Anhang.
             \end{quote}
         \subsubsection{Ergebnisse Vorbereitungsaufgaben}
         \begin{quote}
@@ -354,7 +363,8 @@
 
 %Name, Vorname.; evtl. Name2, Vorname2.: Titel des Dokumentes
 %oder Buches, Zeitschrift/Verlag/URL (Auflage, Erscheinungsort, -jahr), ggf. Seitenzahlen
-%\bibitem [Wiki10] {DigitaleMesskette2} \url{www.wikipedia.org}, Zugriff 22.03.2010
+\bibitem {PasevalscheTheorem} \url{https://de.wikipedia.org/wiki/Parsevalsches_Theorem}, Zugriff
+23.05.2012
 \end{thebibliography}
 
 
