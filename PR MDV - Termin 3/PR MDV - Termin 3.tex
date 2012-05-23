@@ -11,6 +11,49 @@
 \newcommand{\betreuer}{Betreuer: J\"urgen Funk}
 
 \input{../../packages/tu_header_8}
+
+% \lstlistoflistings
+\definecolor{darkgray}{rgb}{0.95,0.95,0.95}
+\definecolor{darkolivegreen}{HTML}{01a801}
+\definecolor{functionsBlue}{HTML}{32b9b9}
+\definecolor{variableRed}{rgb}{1,0,0}
+\definecolor{stringBrown}{HTML}{bc8e8e} % f geht nicht
+
+\lstset{
+        %\lstset{extendedchars=true} % Umlaute an der richtigen stelle und nicht am Anfang ausgeben
+        %basicstyle=\footnotesize\ttfamily,
+        basicstyle=\small,
+        %
+        inputencoding=utf8,
+        %
+        tabsize=4,
+        showspaces=false,
+        showtabs=false,
+        showstringspaces=true, % no special string spaces
+        %
+        backgroundcolor=\color{darkgray}, % background
+        stringstyle=\color{stringBrown}\fseries, % Strings
+        keywordstyle=\color{functionsBlue}\bfseries, % keywords Blau
+        identifierstyle=\color{variableRed}, % variablen
+        commentstyle=\color{darkolivegreen}, %  comments
+        %
+        breaklines=true,
+        %
+        numbers=left,
+        numberstyle=\tiny,
+        stepnumber=1,
+        numbersep=7pt,
+        %
+        frame=single,
+        columns=flexible,
+        %
+        xleftmargin=-2cm,
+        xrightmargin=-1.5cm,
+        %
+        language=Matlab
+}
+
+
 %---------------------------------------------------------------------
 %---------------------------------------------------------------------
 %---------------------------------------------------------------------
