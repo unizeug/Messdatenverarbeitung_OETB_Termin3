@@ -279,25 +279,122 @@
         die ein ganzzahliges Vielfaches der Periodendauer des Messsignals lang
         sind. Somit kann man bei der Untersuchung der Signale Leck-Effekte
         verhindern.\\
+       
+        \subsubsection{Matlabfunktion-Spektrum}
+		\begin{quote}
+            Dafür machten wir uns mit unterschiedlichen Fensterfunktionen vertraut und schrieben eine MATLAB Funktion,
+            mit der ein Fenster generiert werden konnte, dessen Länge genau einer Periodenlänge des verwendeten Signals
+            entspricht. Zusätzlich wurden Fenster und Signal überlagert und die DFT gebildet, Betrags- und
+            Phasenspektren wurden geplottet.\\
+            Das dazugehärige Matlabscripte Spektrum.m sowie Vorbereitungsaufgabe42.m befindet sich im Anhang.\\
+            In diesem Skript haben wir ein Sinussignal mit der Frequenz $100$Hz erzeugt und jeweils mit einem Rechteck-,
+            einem BlackMan-, einem Hanning- sowie einem verkürztem Hanningfenster multipliziert.\\
+            Die Plotts dazu sind hier:
+            
+            \begin{figure}[H]
+            \centering
+                \includegraphics[scale=0.5, trim = 1.5cm 7cm 1.5cm 8cm, clip]{./Bilder/Rechteckwindow}
+                    \caption{Rechteckwindow}
+            \end{figure}
+            
+            \begin{figure}[H]
+            \centering
+                \includegraphics[scale=0.5, trim = 1.5cm 7cm 1.5cm 8cm, clip]{./Bilder/BlackManwindow}
+                    \caption{BlackManwindow}
+            \end{figure}
+    
+            \begin{figure}[H]
+            \centering
+                \includegraphics[scale=0.5, trim = 1.5cm 7cm 1.5cm 8cm, clip]{./Bilder/Hanningwindow}
+                    \caption{Hanningwindow}
+            \end{figure}
+            
+            \begin{figure}[H]
+            \centering
+                \includegraphics[scale=0.5, trim = 1.5cm 7cm 1.5cm 8cm, clip]{./Bilder/Hanningwindowverkuerzt}
+                    \caption{Hanningwindow verkürzt}
+            \end{figure}
+            
+            Die Letzte Simulation zeigt eine Fensterung, die zu dem Leck-Effekt führt. Als Ergebniss ist ein beiteres
+            und flacheres Spektrum zu sehen, wie es beim Leckeffekt zu erwarten war.
+    			
+		\end{quote}
+
+        \subsubsection{DFT eines Rechteck- und Hanningfenster}
+		\begin{quote}
+            Außerdem untersuchten wir die Spektren von einem Hanning- und einem Rechteckfenster, zuerst mit einer
+            Fensterlänge von $16$ und danach mit einer Länge von $2^20$, wobei die restlichen Werte durch Null-Padding
+            eingefügt wurden.\\
+            Das dazugehörige Skript Vorbereitungsaufgabe43.m befindet sich im Anhang
+            Die Plotts dazu sind hier:
+            
+                %4 Grafiken:
+                \begin{center}
+                \begin{tabular}{ll}
+    
+                \hspace{-11em}
+                    \begin{minipage}{0.6\textwidth}
+    
+                        \begin{figure}[H]
+                            \label{fig:}
+                            \includegraphics[scale=0.5, trim = 1.5cm 7cm 1.5cm 8cm, clip]{./Bilder/RechteckDFT}
+                            %FIXME [width=640px,
+                             %height=474px]
+                            \caption{DFT eines Rechteckfensters}
+                        \end{figure}
+    
+                    \end{minipage}
+                    \begin{minipage}{0.6\textwidth}
+    
+                        \begin{figure}[H]
+                            \label{fig:}
+                            \includegraphics[scale=0.5, trim = 1.5cm 7cm 1.5cm 8cm, clip]{./Bilder/HanningDFT}
+                            %FIXME [width=640px,
+                             %height=474px]
+                            \caption{DFT eines Hanningfensters}
+                        \end{figure}
+                    \vspace{-1.5em}
+    
+                    \end{minipage}
+    
+                \end{tabular}
+                \end{center}
+    
+                            %4 Grafiken:
+                \begin{center}
+                \begin{tabular}{ll}
+    
+                \hspace{-11em}
+                    \begin{minipage}{0.6\textwidth}
+    
+                        \begin{figure}[H]
+                            \label{fig:}
+                            \includegraphics[scale=0.5, trim = 1.5cm 7cm 1.5cm 8cm, clip]{./Bilder/RechteckDFTzeropadding} %FIXME [width=640px,
+                            % height=474px]
+                            \caption{DFT eines Rechteckfensters mit Zeropadding}
+                        \end{figure}
+    
+                    \end{minipage}
+                    \begin{minipage}{0.6\textwidth}
+    
+                         \begin{figure}[H]
+                            \label{fig:}
+                            \includegraphics[scale=0.5, trim = 1.5cm 7cm 1.5cm 8cm, clip]{./Bilder/HanningDFTzeropadding} %FIXME [width=640px,
+                            % height=474px]
+                            \caption{DFT eines Hanningfensters mit Zeropadding}
+                        \end{figure}
+                   \vspace{-1.5em}
+    
+                    \end{minipage}
+    
+                \end{tabular}
+                \end{center}
+                
+            
+		\end{quote}
         
-        Dafür machten wir uns mit unterschiedlichen Fensterfunktionen vertraut
-        und schrieben eine MATLAB Funktion, mit der ein Fenster generiert werden
-        konnte, dessen Länge genau einer Periodenlänge des verwendeten Signals
-        entspricht. Zusätzlich wurden Fenster und Signal überlagert und die DFT
-        gebildet, Betrags- und Phasenspektren wurden geplottet.\\
-        Die Plotts dazu sind hier:
-        
-        .
-        .
-        .
-        .
         
         
-        Außerdem untersuchten wir die Spektren von einem hanning- und einem
-        Rechteckfenster, zuerst mit einer Fensterlänge von $16$ und danach mit
-        einer Länge von $2^20$, wobei die restlichen Werte durch Null-Padding
-        eingefügt wurden.\\
-        Die Plotts dazu sind hier: 
         
         
     \end{quote}
@@ -389,14 +486,6 @@
 
 %--------------------------------------------------------------------
 %--------------------------------------------------------------------
-
-\section{Ergebnisse}
-\begin{quote}
-	
-\end{quote}
-
-%--------------------------------------------------------------------
-%--------------------------------------------------------------------
 \section{Quellcodes}
 \begin{quote}
 	
@@ -433,6 +522,13 @@
 	            label=lst:Matlab]
 	            {./Matlab/EffektivwertFourier.m}
 	    \end{quote}
+	    \subsubsection{alphadetektor2.m}
+        \begin{quote}
+            \lstinputlisting[
+                caption={alphadetektor2},
+                label=lst:Matlab]
+                {./Matlab/alphadetektor2.m}
+        \end{quote}
 	\end{quote}
 	
 	\subsection{Codes aus Termin 4}
@@ -441,9 +537,9 @@
 		\subsubsection{Spektrum.m}
 		\begin{quote}
 		\lstinputlisting[
-				caption={},
-				label=lst:Matlab]
-				
+				caption={Spektrum},
+				label=lst:Spektrum]
+				{./Matlab/Spektrum.m}
 		\end{quote}
 		
 		\subsubsection{Vorbereitungsaufgabe2.m}
@@ -451,15 +547,15 @@
 		\lstinputlisting[
 				caption={},
 				label=lst:Matlab]
-		
+		        {./Matlab/Vorbereitungsaufgabe42.m}
 		\end{quote}
 		
 		\subsubsection{Vorbereitungsaufgabe3.m}
 		\begin{quote}
 		\lstinputlisting[
-				caption={},
+				caption={Vorbereitungsaufgabe43},
 				label=lst:Matlab]
-		
+                {./Matlab/Vorbereitungsaufgabe43.m}		
 		\end{quote}
 		
 	\end{quote}
