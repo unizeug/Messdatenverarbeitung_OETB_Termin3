@@ -3,8 +3,8 @@
 \newcommand{\veranstaltung}{Praktikum Messdatenverarbeitung}
 \newcommand{\pdfautor}{\"Ozg\"u Dogan (326 048), Timo Lausen (325 411), Boris Henckell (325 779)}
 \newcommand{\autor}{\"Ozg\"u Dogan (326 048)\\ Timo Lausen (325 411)\\ Boris Henckell (325 779)}
-\newcommand{\pdftitle}{Praktikum Messdatenverarbeitung  Termin 1}
-\newcommand{\prototitle}{Praktikum Messdatenverarbeitung \\ Termin 2}
+\newcommand{\pdftitle}{Praktikum Messdatenverarbeitung  Termin 3}
+\newcommand{\prototitle}{Praktikum Messdatenverarbeitung \\ Termin 3}
 \newcommand{\aufgabe}{}
 
 \newcommand{\gruppe}{Gruppe: G1 Fr 08-10}
@@ -224,7 +224,75 @@
 
 \section{Versuch}
 \begin{quote}
+
+	\subsection{Schaltungsaufbau}
+	\begin{quote}
+	Im praktischen Teil des Termins wurden nun reelle Messwerte aufgenommen und
+	anhand der Diskreten Fouriertransformation untersucht.\\
+	Dazu wurde zunächst eine Schaltung aufgebaut, in der der Strom im
+	Dimmerschaltkreis erfasst werden konnte. Der Strom aus der Steckdose führt
+	dabei in die Dimmerschaltung und dann in den Stromwandler der Wandler-Box. Dort
+	wird das Signal in eine Spannung umgewandelt. Das Verhältnis von Strom zu
+	Spannung ist bei dem Wandler linear. Bei einem Maximalstrom von $0.9 A$ kann
+	man eine Maximalspannung von $\pm 10 V$ erhalten. Daher muss der Vorfaktor von
+	$\frac{0.9 A}{10 V} = 0.09 \frac{A}{V}$ berücksichtigt werden. Noch in der
+	Wandler-Box wird dieses Signal gefiltert und führt zum Sensorknoten, wo anhand
+	der Spannungsmessung Rückschlüsse auf den Strom gemacht werden können.
+	\end{quote}
 	
+	\subsection{MATLAB-Skript für Anschnittswinkel-Bestimmung}
+	\begin{quote}	
+	Als nächstes soll anhand eines selbstgeschriebenem MATLAB-Skripts der
+	Anschnittswinkel der unterschiedlichen Signale bestimmt werden. Die
+	Anschnittswinkel werden dafür vorher mit dem Oszilloskop eingestellt. Da es
+	manuell nicht so einfach ist, wurden kleine Abweichungen toleriert. Hier eine
+	Tabelle der Anschnittswinkel mit den dazugehörigen Zeitlängen, in denen das
+	Signal nicht in der normale Sinusperiode verläuft:
+	
+	   \begin{center}
+                 \begin{tabular}{|c|c|c|}
+                             
+                   \hline
+                   Anschnittswinkel & $t\ [ms]$ erwünscht & $t\ [ms]$
+                   eingestellt\\ \hline 
+                   $\frac{1}{8} \pi$ & 1.25 & 1.2 \\ \hline
+                   $\frac{1}{4} \pi$ & 2.5 & 2.4 \\ \hline
+                   $\frac{3}{8} \pi$ & 3.75 & 3.6 \\ \hline
+                   $\frac{1}{2} \pi$ & 5 & 5 \\ \hline
+                   $\frac{5}{8} \pi$ & 6.25 & 6.2 \\ \hline
+                   $\frac{3}{4} \pi$ & 7.5 & 7.6 \\ \hline
+                   $\frac{7}{8} \pi$ & 8.75 & 8.6 \\ \hline                         
+           
+                 \end{tabular}
+       \end{center}        
+       
+    Das dazugehörige Skript ist am Ende des Protokolls zu sehen.\\
+    
+    Im Vergleich zwischen den am Oszilloskop abgelesenen Werten und den MATLAB
+    Ergebnissen können wir sehen, dass wir entweder echt hammermäßige oder toal
+    bekloppte Ergebnisse haben!!
+	\end{quote}
+	
+	\subsection{Amplituden- und Phasenspektrum des Stroms anhand der Diskreten
+	Fouriertransformation}
+	\begin{quote}
+	\end{quote}
+	
+	\subsection{Effektivwert des Stroms im Zeit- und Frequenzbereich}
+	\begin{quote}
+	Zuletzt sollte der Effektivwert des Stroms einer Messung im Zeit- und
+	Frequenzbereich ermittelt werden, indem der MATLAB-Skript der
+	Vorbereitungsaufgabe verwendet wurde. Wir verwendeten den Strom des Signals bei
+	einem Anschnittswinkel von $\frac{\pi}{2}$.\\
+	Das MATLAB-Skript gibt uns das Ergebnis von $0.21 A$ für Zeit- und
+	Frequenzbereich. Der mithilfe des Multimeters gemessene Strom beträgt $0.224
+	A$.\\
+	
+	Vergleicht man beide Messungen, kann man sehen, dass es keine erhebliche
+	Differenz gibt.
+	
+	 
+	\end{quote}
 \end{quote}
 
 %--------------------------------------------------------------------
