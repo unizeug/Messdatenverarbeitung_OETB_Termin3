@@ -222,6 +222,31 @@
     \end{quote}
     \subsection{Vorbereitungsaufgaben Termin 4}
     \begin{quote}
+        In dem zweiten Teil der Vorbereitungsaufgaben ging es um Fensterung. Mit
+        unterschiedlichen Fensterfunktionen kann man Analysefenster erschaffen,
+        die ein ganzzahliges Vielfaches der Periodendauer des Messsignals lang
+        sind. Somit kann man bei der Untersuchung der Signale Leck-Effekte
+        verhindern.\\
+        
+        Dafür machten wir uns mit unterschiedlichen Fensterfunktionen vertraut
+        und schrieben eine MATLAB Funktion, mit der ein Fenster generiert werden
+        konnte, dessen Länge genau einer Periodenlänge des verwendeten Signals
+        entspricht. Zusätzlich wurden Fenster und Signal überlagert und die DFT
+        gebildet, Betrags- und Phasenspektren wurden geplottet.\\
+        Die Plotts dazu sind hier:
+        
+        .
+        .
+        .
+        .
+        
+        
+        Außerdem untersuchten wir die Spektren von einem hanning- und einem
+        Rechteckfenster, zuerst mit einer Fensterlänge von $16$ und danach mit
+        einer Länge von $2^20$, wobei die restlichen Werte durch Null-Padding
+        eingefügt wurden.\\
+        Die Plotts dazu sind hier: 
+        
         
     \end{quote}
 \end{quote}
@@ -312,37 +337,72 @@
 
 %--------------------------------------------------------------------
 %--------------------------------------------------------------------
-\section{Quellcode}
+\section{Quellcodes}
 \begin{quote}
-    \subsection{sinus2.m}
-    \begin{quote}
-        \lstinputlisting[
-            caption={sinus2},
-            label=lst:Matlab]
-            {./Matlab/sinus2.m}
-    \end{quote}
-    \subsection{stromPhasSchnitt.m}
-    \begin{quote}
-        \lstinputlisting[
-            caption={stromPhasSchnitt},
-            label=lst:Matlab]
-            {./Matlab/stromPhasSchnitt.m}
-    \end{quote}
-    \subsection{EffektivwertZeitbereich.m}
-    \begin{quote}
-        \lstinputlisting[
-            caption={EffektivwertZeitbereich},
-            label=lst:Matlab]
-            {./Matlab/EffektivwertZeitbereich.m}
-    \end{quote}
-    \subsection{EffektivwertFourier.m}
-    \begin{quote}
-        \lstinputlisting[
-            caption={EffektivwertFourier},
-            label=lst:Matlab]
-            {./Matlab/EffektivwertFourier.m}
-    \end{quote}
 	
+	\subsection{Codes aus Termin 3}
+	\begin{quote}
+	    \subsubsection{sinus2.m}
+	    \begin{quote}
+	        \lstinputlisting[
+	            caption={sinus2},
+	            label=lst:Matlab]
+	            {./Matlab/sinus2.m}
+	    \end{quote}
+    
+	    \subsubsection{stromPhasSchnitt.m}
+	    \begin{quote}
+	        \lstinputlisting[
+	            caption={stromPhasSchnitt},
+	            label=lst:Matlab]
+	            {./Matlab/stromPhasSchnitt.m}
+	    \end{quote}
+    
+	    \subsubsection{EffektivwertZeitbereich.m}
+	    \begin{quote}
+	        \lstinputlisting[
+	            caption={EffektivwertZeitbereich},
+	            label=lst:Matlab]
+	            {./Matlab/EffektivwertZeitbereich.m}
+	    \end{quote}
+    
+	    \subsubsection{EffektivwertFourier.m}
+	    \begin{quote}
+	        \lstinputlisting[
+	            caption={EffektivwertFourier},
+	            label=lst:Matlab]
+	            {./Matlab/EffektivwertFourier.m}
+	    \end{quote}
+	\end{quote}
+	
+	\subsection{Codes aus Termin 4}
+	\begin{quote}
+		
+		\subsubsection{Spektrum.m}
+		\begin{quote}
+		\lstinputlisting[
+				caption={},
+				label=lst:Matlab]
+				
+		\end{quote}
+		
+		\subsubsection{Vorbereitungsaufgabe2.m}
+		\begin{quote}
+		\lstinputlisting[
+				caption={},
+				label=lst:Matlab]
+		
+		\end{quote}
+		
+		\subsubsection{Vorbereitungsaufgabe3.m}
+		\begin{quote}
+		\lstinputlisting[
+				caption={},
+				label=lst:Matlab]
+		
+		\end{quote}
+		
+	\end{quote}
 \end{quote}
 
 %--------------------------------------------------------------------
