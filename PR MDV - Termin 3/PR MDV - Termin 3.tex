@@ -390,6 +390,18 @@
                 \end{tabular}
                 \end{center}
                 
+        Wir können sehen, dass die DFT-Spektren der Fenster mit dem Zero-Padding
+        den erwarteten Sifunkionen entsprechen, während die DFT-Spektren der
+        Fenster mit der Länge von $16$ es nicht tun. Dieses Ergebnis liegt
+        daran, dass durch die DFT das Zeitsignal periodisch erweitert wird. Wenn
+        beispielsweise beim Rechteck ein Signal mit der konstanten Amplitude von
+        $1$ unendlich erweitert wird, erhält man ein unendlich ausgedehntes Rechteck mit der
+        Amplitude $1$. Bei der DFT wird das Signal dann nicht als das
+        Ursprungssignal erkannt und die Spektren weichen von der Erwartung ab.
+        Wenn aber durch das Zero-Padding das Rechteck in der unendlichen Periodizität hervorgehoben wird, 
+        kann das Signal als Rechteck abgetastet und in eine korrekte Sifunktion transformiert
+        werden. Das gleiche Ereignis macht sich auch beim Hanningfenster
+        sichtbar. 
             
 		\end{quote}
         
