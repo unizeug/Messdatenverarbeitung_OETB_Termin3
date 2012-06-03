@@ -3,7 +3,7 @@
 %erstellen eines Sinussignals
 x = 0:0.01:2*pi;
 x = x';
-f = 100;
+f = 51;
 fs = 15000;
 
 t = 0 :1/fs : 2/f;

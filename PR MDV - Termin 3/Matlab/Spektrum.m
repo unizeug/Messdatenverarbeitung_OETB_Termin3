@@ -43,12 +43,14 @@ t = 0 :1/fs : (N-1)/fs;
 length(t)
 %Frequenzachse
 %f_DFT = fs*2*(0:(N-1))/(N-1);
-f_DFT = fs/N*(-N/2+0.5:N/2-0.5);
+f_DFT = (-N/2+0.5:N/2-0.5)*fs/N;
+%ceil bzw floor als Lösung
 %neues Fenster zur Darstellung
 figure(fig);
 %Darstellung des Zeitsignals
 subplot(3,1,1);
 plot(t,xt);
+%stem(t,xt);
 %AXIS([-150 150 0 2])
  title('Zeitsignal');
  xlabel('t/s');
@@ -58,7 +60,8 @@ subplot(3,1,2);
 if LogFlag == 1
     semilogy(f_DFT, BetragXf);
 else
-    plot(f_DFT, BetragXf,'-');
+    %plot(f_DFT, BetragXf,'-');
+    stem(f_DFT,BetragXf);
 end;
 %AXIS([-300 300 0 0.5])%für die Vorbereitungsaufgabe 2
 %Axis([-0.5 0.5 -0.01 0])%für die Vorbereitungsaufgabe 3
