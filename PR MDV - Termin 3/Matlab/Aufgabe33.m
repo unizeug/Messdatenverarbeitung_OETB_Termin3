@@ -3,27 +3,45 @@ clear;
 load('Anschnitt_pi_2.mat');
 xt1 = Anschnitt_pi_2;
 recht = ones(length(xt1),1);
+wn=recht;
+fs=5000;
 %FFTplot(xt1,0.03,5000,1,'b',1)
-%Spektrum(xt1,recht,50000,1,2)
+%Spektrum(xt1,wn,fs,0,12);
 
-%Amplitudengang
+N = length(xt1);
+w = (0:N-1/2)*fs/(N/2);
+%% Amplitudengang
+%idealer Amplitudengang
+b = mkfilter(3100/(2*pi),2,'butterw');
+b = b^4;
 
-%Messwerte
-   f=[10 1000 1250 1500 1750 2000 3000 3500 4000 4500 5000 5500 6000 6500 7000 8000 9000 10000];
-   H=[2.1837 2.1948 2.1402 2.0376 1.8867 1.6775 0.6915 0.3736 0.2048 0.1360 0.1065 0.0976 0.0979 0.0980 0.0971 0.0968 0.0969 0.0930]./18;
-   
-%interpolation des Amplitudenganges
-    Amp= 20*log(H);
-    yp2 = spline(f,Amp);
-%   figure(3)
-%   semilogx(f,ppval(yp2,f));
 
-ampgang = ppval(yp2,f);
-ampgang = ampgang';
-xt2 = xt1./ampgang;
+% kehrwert des Amplitudenganges
+[mag, phase,wout]=bode(b,w);
+magdb= (20*log(mag));
+h1=zeros(N,1);
+i=1;
+while i<(N+1)/2
+    h1(i)=magdb(1,1,i);
+    h1(N-i)=magdb(1,1,i);
+    i = i+1;
+end
 
-%FFTplot(xt2,0.03,5000,1,'b',3)
-%Spektrum(xt2,recht,50000,1,4)
+% figure(5)
+% semilogx(wout,h1);
+% 
+% figure(6)
+ h2=1-h1;
+% semilogx(wout, h2);
+ 
+% figure(7);
+% bode(b,w);
+
+
+Spektrum2Filterkorrektur(xt1,wn,fs,h2,0,11); 
+
+
+
+
  
 
-%funktioniert noch nicht brauche noch hilfe
