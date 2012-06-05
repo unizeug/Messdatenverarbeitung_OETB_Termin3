@@ -1,10 +1,12 @@
 %Aufgabe 3.3
-clear;
-load('Anschnitt_pi_2.mat');
-xt1 = Anschnitt_pi_2;
+clear;close all;
+%load('Anschnitt_pi_2.mat');
+%xt1 = Anschnitt_pi_2;
+load('messung1');
+xt1 = messung1;
 recht = ones(length(xt1),1);
 wn=recht;
-fs=5000;
+fs=15000;
 %FFTplot(xt1,0.03,5000,1,'b',1)
 %Spektrum(xt1,wn,fs,0,12);
 
@@ -34,8 +36,8 @@ end
  h2=1-h1;
 % semilogx(wout, h2);
  
-% figure(7);
-% bode(b,w);
+ %figure(7);
+ %bode(b,w);
 
 
 Spektrum2Filterkorrektur(xt1,wn,fs,h2,0,11); 
