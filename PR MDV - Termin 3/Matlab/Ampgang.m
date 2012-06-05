@@ -6,6 +6,7 @@
    semilogx(f,amp)
    grid on;
    
+<<<<<<< HEAD
     figure(1); 
     clf();
     b = mkfilter(3100/(2*pi),8,'butterw');
@@ -15,3 +16,12 @@
     LEGEND('Aufgenommener Amplitudengang','Idealer Amplitudengang');
     grid on;
    
+=======
+   yp = polyfit(f,Amp,1);
+   figure(2)
+   semilogx(f,polyval(yp,f));
+   
+   yp2 = spline(f,Amp);
+   figure(3)
+   semilogx(f,ppval(yp2,f));
+>>>>>>> refs/heads/master
