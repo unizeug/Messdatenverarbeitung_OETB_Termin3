@@ -603,7 +603,7 @@
 
 	\begin{figure}[htb]
 	\centering
-	\includegraphics[scale=0.7, width=1\textwidth]{./Bilder/Versuchsaufbau1}
+	\includegraphics[scale=0.6,  trim = 0cm 0cm 0cm 0cm,clip]{./Bilder/Versuchsaufbau1}
 	\caption{Versuchsaubau um angeschnittenen Strom zu messen}
 	\end{figure}
 	
@@ -647,6 +647,15 @@
 		Es werden nun nacheinander Rechteck-, Hanning- und Blackmanfenster über das Signal gelegt. 
 		Die Längen der Fenster sind absichtlich so gewählt, dass es zum Leckeffekt kommt. 
 		Es wird nun untersucht, wie sich die unterschiedlichen Fenster auf den Leckeffekt auswirken. 
+		
+		\begin{figure}[H]
+        \centering
+            \includegraphics[scale=0.6, trim = 1.5cm 7cm 1.5cm 8.5cm,
+            clip]{./Bilder/Phasenanschnittsmessungmithanningfensterleckeffekt}
+                \caption{Phasenanschnittsmessung mit zu kurzem Hanningfenster}
+        \end{figure}
+    
+		
 		\end{quote}
 		
 		\subsubsection{Qualität der Netzspannung}
@@ -662,7 +671,8 @@
 		
 		\begin{figure}[htb]
 		\centering
-		\includegraphics[scale=0.7, width=1\textwidth]{./Bilder/Versuchsaufbau2}
+		\includegraphics[scale=0.6, trim = 0cm 0cm 0cm 0cm,
+            clip]{./Bilder/Versuchsaufbau2}
 		\caption{Versuchsaubau um Netzqualität zu messen}
 		\end{figure}
 		
@@ -752,9 +762,17 @@
 		\begin{quote}
 		\lstinputlisting[
 				caption={Spektrum},
-				label=lst:Spektrum]
+				label=lst:Matlab]
 				{./Matlab/Spektrum.m}
 		\end{quote}
+		
+		\subsubsection{Spektrum2Filterkorrektur.m}
+        \begin{quote}
+        \lstinputlisting[
+                caption={Spektrum2Filterkorrektur},
+                label=lst:Matlab]
+                {./Matlab/Spektrum2Filterkorrektur.m}
+        \end{quote}
 		
 		\subsubsection{Vorbereitungsaufgabe2.m}
 		\begin{quote}
@@ -772,8 +790,26 @@
                 {./Matlab/Vorbereitungsaufgabe43.m}		
 		\end{quote}
 		
+		\subsubsection{praxisaufgabe41.m}
+        \begin{quote}
+        \lstinputlisting[
+                caption={praxisaufgabe41},
+                label=lst:Matlab]
+                {./Matlab/praxisaufgabe41.m}     
+        \end{quote}
+        
+        \subsubsection{MDV PR4 aufgabe3.m}
+        \begin{quote}
+        \lstinputlisting[
+                caption={MDV PR4 aufgabe3},
+                label=lst:Matlab]
+                {./Matlab/MDV_PR4_aufgabe3.m}     
+        \end{quote}
+		
 	\end{quote}
 \end{quote}
+
+
 
 %--------------------------------------------------------------------
 %--------------------------------------------------------------------

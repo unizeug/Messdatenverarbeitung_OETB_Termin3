@@ -1,0 +1,25 @@
+%MDV PR4 Aufgabe 3
+
+clear;
+
+
+load ('messung3');
+
+xt = messung3;
+xt = Code2Volt(xt);
+xt = xt';
+N = length(xt);
+
+fs = 15000;
+wn1 = hanning(N);
+wn2 = ones(N,1);
+wn3 = blackman(N);
+
+Betragsspektrum1 = Spektrum(xt, wn1, fs, 0, 1);
+%Spektrum(xt, wn2, fs, 0, 2);
+Betragsspektrum2 = Spektrum(xt, wn3, fs, 0, 3);
+
+n = length(Be
+
+%Gesamtoberschwingungsgehalt (THD-Wert)
+TDH = (sqrt(Betragsspektrum1.^2 - Betragsspekrum1()^2 - Betragsspektrum1()^2))/(Betragsspekrum1()^2 + Betragsspektrum1()^2);
