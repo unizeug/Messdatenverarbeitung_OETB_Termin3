@@ -298,30 +298,68 @@ achten, Vollständigkeit beachten}
             einem BlackMan-, einem Hanning- sowie einem verkürztem Hanningfenster multipliziert.\\
             Die Plotts dazu sind hier:
             
-            \begin{figure}[H]
-            \centering
-                \includegraphics[scale=0.5, trim = 1.5cm 7cm 1.5cm 8cm, clip]{./Bilder/Rechteckwindow}
-                    \caption{Rechteckwindow}
-            \end{figure}
-            
-            \begin{figure}[H]
-            \centering
-                \includegraphics[scale=0.5, trim = 1.5cm 7cm 1.5cm 8cm, clip]{./Bilder/BlackManwindow}
-                    \caption{BlackManwindow}
-            \end{figure}
+                            %4 Grafiken:
+                \begin{center}
+                \begin{tabular}{ll}
     
-            \begin{figure}[H]
-            \centering
-                \includegraphics[scale=0.5, trim = 1.5cm 7cm 1.5cm 8cm, clip]{./Bilder/Hanningwindow}
-                    \caption{Hanningwindow}
-            \end{figure}
-            
-            \begin{figure}[H]
-            \centering
-                \includegraphics[scale=0.5, trim = 1.5cm 7cm 1.5cm 8cm, clip]{./Bilder/Hanningwindowverkuerzt}
-                    \caption{Hanningwindow verkürzt}
-            \end{figure}
-            
+                \hspace{-11em}
+                    \begin{minipage}{0.6\textwidth}
+    
+                        \begin{figure}[H]
+                            \label{fig:}
+                            \includegraphics[scale=0.5,trim = 1.5cm 7cm 1.5cm 8cm, clip]{./Bilder/Rechteckwindow}
+                            %FIXME [width=640px,
+                             %height=474px]
+                            \caption{DFT eines Rechteckfensters}
+                        \end{figure}
+    
+                    \end{minipage}
+                    \begin{minipage}{0.6\textwidth}
+    
+                        \begin{figure}[H]
+                            \label{fig:}
+                            \includegraphics[scale=0.5,trim = 1.5cm 7cm 1.5cm 8cm, clip]{./Bilder/BlackManwindow}
+                            %FIXME [width=640px,
+                             %height=474px]
+                            \caption{DFT eines Hanningfensters}
+                        \end{figure}
+                    \vspace{-1.5em}
+    
+                    \end{minipage}
+    
+                \end{tabular}
+                \end{center}
+    
+                            %4 Grafiken:
+                \begin{center}
+                \begin{tabular}{ll}
+    
+                \hspace{-11em}
+                    \begin{minipage}{0.6\textwidth}
+    
+                        \begin{figure}[H]
+                            \label{fig:}
+                            \includegraphics[scale=0.5,trim = 1.5cm 7cm 1.5cm 8cm, clip]{./Bilder/Hanningwindow} %FIXME [width=640px,
+                            % height=474px]
+                            \caption{DFT eines Rechteckfensters mit Zeropadding}
+                        \end{figure}
+    
+                    \end{minipage}
+                    \begin{minipage}{0.6\textwidth}
+    
+                         \begin{figure}[H]
+                            \label{fig:}
+                            \includegraphics[scale=0.5, trim = 1.5cm 7cm 1.5cm 8cm, clip]{./Bilder/Hanningwindowverkuerzt} %FIXME [width=640px,
+                            % height=474px]
+                            \caption{DFT eines Hanningfensters mit Zeropadding}
+                        \end{figure}
+                   \vspace{-1.5em}
+    
+                    \end{minipage}
+    
+                \end{tabular}
+                \end{center}
+   
             Die Letzte Simulation zeigt eine Fensterung, die zu dem Leck-Effekt führt. Als Ergebniss ist ein beiteres
             und flacheres Spektrum zu sehen, wie es beim Leckeffekt zu erwarten war.
     			
