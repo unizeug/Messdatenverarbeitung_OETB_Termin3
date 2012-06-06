@@ -59,9 +59,6 @@
 %---------------------------------------------------------------------
 %---------------------------------------------------------------------
 
-\TODO{Özgü: nochmal Korrekturlesen, TODOs entfernen, Vollständigkeit beachten}
-\TODO{Boris: Bilder schöner einfügen, auf Gesamtform
-achten, Vollständigkeit beachten}
 
 \section{Vorbereitungsaufgaben}
 \begin{quote}
@@ -70,7 +67,8 @@ achten, Vollständigkeit beachten}
         \subsubsection{Sinusfunktion erzeugen und DFT erstellen}
         \begin{quote}
             Die erste Vorbereitungsaufgabe hatte das Ziel einen verschobenes Sinussignal zu erzeugen, die DFT davon zu
-            betimmen und dieses zu plotten. Der dazugehärige Quelltext sinus2.m befindet sich im Anhang.
+            bestimmen und dieses zu plotten. Der dazugehärige Quelltext sinus2.m
+            befindet sich im Anhang.
             \begin{figure}[H]
             \centering
                 \includegraphics[scale=0.5, trim = 1cm 6cm 1.5cm 8cm, clip]{./Bilder/VerschobenerSinusAufgabe1}
@@ -82,13 +80,15 @@ achten, Vollständigkeit beachten}
         
     	\subsubsection{Angeschnittene Sinusfunktion}
         \begin{quote}
-            In der zweiten Vorbereitungsaufgabe sollte eine Matlab-Funktion geschrieben werden die einen angeschnittene
-            Sinusfunktion simuliuliert.\\
-            Um diese Funktion zu erstellen haben wir eine for Schleife imlementiert, die den gesamten zeitvektor t
-            durchläuft. Für jeden Durchlauf wird getestet, wo sich der jeweilige Zeitpunkt im Verhältniss zum halben
-            sinussignal befindet. Anschließend wird in der if abfrage bestimmt, ob sich dieser Zeitpunkt relativ zur halben
+            In der zweiten Vorbereitungsaufgabe sollte eine Matlab-Funktion
+            geschrieben werden, die einen angeschnittene Sinusfunktion simuliuliert.\\
+            Um diese Funktion zu erstellen haben wir eine for Schleife
+            imlementiert, die den gesamten Zeitvektor t durchläuft. Für jeden Durchlauf wird getestet, 
+            wo sich der jeweilige Zeitpunkt im Verhältniss zum halben
+            Sinussignal befindet. Anschließend wird in der if Abfrage bestimmt, ob sich dieser Zeitpunkt relativ zur halben
             Periode des Sinussignals vor oder hinter dem Phasenanschnittswinkel befindet. Abhängig davon wird der
-            dentsprechenden Stelle im Ausgabevektor der Wert $0$ oder der Wert den die Sinusfunktion ermittelt, übergeben.\\
+            dementsprechenden Stelle im Ausgabevektor der Wert $0$ oder der
+            Wert, den die Sinusfunktion ermittelt, übergeben.\\
             Wir haben die Graphen für folgende Phasenanschnittswinkel $ \alpha = 0, \frac{1}{8} \pi, \frac{1}{4}
             \pi, \frac{3}{8} \pi, \frac{1}{2} \pi,\frac{5}{8} \pi, \frac{3}{4} \pi, \frac{7}{8} \pi$ und $\pi$
             geplottet.\\
@@ -360,8 +360,8 @@ achten, Vollständigkeit beachten}
                 \end{tabular}
                 \end{center}
    
-            Die Letzte Simulation zeigt eine Fensterung, die zu dem Leck-Effekt führt. Als Ergebniss ist ein beiteres
-            und flacheres Spektrum zu sehen, wie es beim Leckeffekt zu erwarten war.
+            Die letzte Simulation zeigt eine Fensterung, die zu dem Leck-Effekt
+            führt. Als Ergebniss ist ein beiteres und flacheres Spektrum zu sehen, wie es beim Leckeffekt zu erwarten war.
     			
 		\end{quote}
 
@@ -499,34 +499,45 @@ achten, Vollständigkeit beachten}
         aufzunehmen und das Amplituden sowie das Phasenspektrum aufzunehmen. Es sollte eine passende Abtastfrequenz und
         ein passendes Messfenster gewählt werden. Außerdem sollte der Einfluss des Antialiasing-Filters auf den
         Betragsfrequenzgang korrigiert werden.\\
-        Für unsere Messung haben wir uns entschieden mit einer Abtastfrequenz von $15kHz$ und einem Messfenster von
-        $600$ Messwerten abzutasten. Die Abtastfrequenz haben wir gewält, da sie fast die maximal mögliche
-        Abtastfrequenz des Messknotens ist und wir mit mehr Abtastwerten eine größere Genauigkeit erreichen. Als
-        Zeitfenster haben wir zwei Perioden gewählt, was bei einer Frequenz von $50Hz$ eine Zeitfenster von $0$ bis
+        Für unsere Messung haben wir uns entschieden, mit einer Abtastfrequenz
+        von $15kHz$ und einem Messfenster von $600$ Messwerten abzutasten. Die
+        Abtastfrequenz haben wir gewählt, da sie fast die maximal mögliche Abtastfrequenz des Messknotens ist und wir mit 
+        mehr Abtastwerten eine größere Genauigkeit erreichen. 
+        Als Zeitfenster haben wir zwei Perioden gewählt, was bei einer Frequenz von $50Hz$ ein Zeitfenster von $0$ bis
         $0.04 s$ bedeutet. Bei der gewählten Abtastfrequenz ergibt sich daraus ein Messfenster von $600$
-        Messwerten.\vspace{1em}
+        Messwerten.
         
-        Um die Auswirkung des Antialiasing-Filters auf den Betragsfrequenzgang zu korrigieren betrachen wir zunächst den
-        Betragsfrequenzgang des Filters selbst den wir in einem früheren Termin aufgenommen haben. Wie gewollt dämpft
-        das Filter alle Frequenzen größer als $5kHz$ mit mehr als $60dB$ und ist damit nicht mehr von dem ADU messbar.
-        Um dieses Ziel zu erreichen beginnt das Filter schon ab einer Frequenz von $1,2 kHz$ zu dämfen und verfälscht
-        dadurch die Amplituden der Messwerte der Frequenzen zwischen $1,2 kHz$ und $5 kHz$.\vspace{1em}
+        \vspace{1em}
+        
+        Um die Auswirkung des Antialiasing-Filters auf den Betragsfrequenzgang
+        zu korrigieren, betrachen wir zunächst den Betragsfrequenzgang des
+        Filters selbst, den wir in einem früheren Termin aufgenommen haben. Wie gewollt dämpft das Filter alle Frequenzen 
+        größer als $5kHz$ mit mehr als $60dB$ und ist damit nicht mehr von dem ADU messbar.
+        Um dieses Ziel zu erreichen, beginnt das Filter schon ab einer Frequenz
+        von $1,2 kHz$ zu dämfen und verfälscht dadurch die Amplituden der Messwerte der Frequenzen 
+        zwischen $1,2 kHz$ und $5 kHz$.
+        
+        \vspace{1em}
         
         Diesen Fehler korrigieren wir indem wir den Kehrwert des Amplitudengangs des Filters mit dem Betragsspektrum der
-        Messwerte multiplizieren. Dafür benötigen wir genausoviele Abtastwerte des Amplitudengangs des Filters wie wir
-        auch für die gesamte Messung gewählt haben: $600$. Bei der manuellen Messung des Frequenzganges haben wir jedoch
+        Messwerte multiplizieren. Dafür benötigen wir genau so viele Abtastwerte
+        des Amplitudengangs des Filters wie wir auch für die gesamte Messung gewählt haben: $600$. 
+        Bei der manuellen Messung des Frequenzganges haben wir jedoch
         lediglich $18$ Messwerte aufgenommen. Unser erster Gedanke war eine Interpolation des gemessenen Frequenzgang zu
-        erstellen und daraus einen passenden Vektor zu erstellen. Leider hatten wir dabei einige
-        Umsetzungsschwierigkeiten wesshalb uns unser Tutor den Tipp gab anstatt des reell gemessenen Filters das
-        simulierten Filter zu benutzen.\\
+        erstellen und daraus einen passenden Vektor zu realisieren. Leider
+        hatten wir dabei einige Umsetzungsschwierigkeiten, wesshalb uns unser
+        Tutor den Tipp gab, anstatt des reell gemessenen Filters das simulierten
+        Filter zu benutzen.\\
         Daher haben wir uns mit Hilfe des bode Befehls den Betragsgang des simulierten Butterworth Tiefpass 8.Ordnung
-        für die selben Frequenzen ausgeben lassen mit denen auch abgetastet wurde. Jedoch mussten wir noch beachten,
-        dass das abgetastete Signal bei der DFT doppelt vorkommt und auch den Betragsgang daran anpassen müssen. Da wir
-        uns dafür entschieden haben in $dB$ zu arbeiten haben wir diesen Betragsgang von $1$ abgezogen um den
-        invertierten Betragsfrequenzgang zu bekommen.\vspace{1em}
+        für die selben Frequenzen ausgeben lassen, mit denen auch abgetastet
+        wurde. Jedoch mussten wir noch beachten, dass das abgetastete Signal bei der DFT doppelt vorkommt 
+        und auch den Betragsgang daran anpassen müssen. Da wir
+        uns dafür entschieden haben in $dB$ zu arbeiten, haben wir diesen
+        Betragsgang von $1$ abgezogen um den invertierten Betragsfrequenzgang zu bekommen.\vspace{1em}
         
-        Zur Korrektur haben wir diesen invertierten Betragsfrequenzgang bei der betrechnung des Spektrum des gemessenen
-        Signals an das errechnete Betragsspektrum addiert. Anschließend haben wir das korrigierte Spektrum geplottet.
+        Zur Korrektur haben wir diesen invertierten Betragsfrequenzgang bei der
+        Berechnung des Spektrum des gemessenen Signals an das errechnete
+        Betragsspektrum addiert. Anschließend haben wir das korrigierte Spektrum geplottet.
         Außerdem haben wir den korrigierten und den unkorrigierten Betragsfrequenzgang übereinandergelegt.\\
         Hier sind die Ergebnisse:\\
         
@@ -542,10 +553,10 @@ achten, Vollständigkeit beachten}
                 \caption{Korregierter und unkorrigierter Betrgsfrequenzgang}
         \end{figure}
         
-        Wie zu erwarten war hat die Korrektur auf den ersten Blick keinen auffallenden einfluss. Das Betragspektrum
-        zeigt, dass die Frequenzen, die durch das Antialiasing Filter beeinflusst werden sowieso schon eine kleine
-        Amplitude besitzen. Um jedoch die Auswirkungen der Korrektur genauer zubetrachten Vergrößern wir den
-        Betragsfrequenzgang auf den interessanten Bereich der hohen Frequenzen.
+        Wie zu erwarten war hat die Korrektur auf den ersten Blick keinen auffallenden Einfluss. Das Betragspektrum
+        zeigt, dass die Frequenzen, die durch das Antialiasing Filter
+        beeinflusst werden, sowieso schon eine kleine Amplitude besitzen. Um jedoch die Auswirkungen der Korrektur 
+        genauer zu betrachten, Vergrößern wir den Betragsfrequenzgang auf den interessanten Bereich der hohen Frequenzen.
         
         \begin{figure}[H]
         \centering
@@ -554,8 +565,10 @@ achten, Vollständigkeit beachten}
                 \caption{Korregierter und unkorrigierter Betragsfrequenzgang}
         \end{figure}
     
-        In dieser Grafik lässt sich gut erkennen, dass die Korrektur die Amplituden der hohen Frequenzen verstärkt die
-        Amplituden der niedrigen Frequenzen jedoch nahezu unverändert lässt. Ein solches Verhalten haben wir erwartet.
+        In dieser Grafik lässt sich gut erkennen, dass die Korrektur die
+        Amplituden der hohen Frequenzen verstärkt, die Amplituden der niedrigen Frequenzen 
+        jedoch nahezu unverändert lässt. Ein solches Verhalten haben wir erwartet.
+        
 	\end{quote}
 	
 	\subsection{Effektivwert des Stroms im Zeit- und Frequenzbereich}
@@ -605,11 +618,11 @@ achten, Vollständigkeit beachten}
 		bestimmt werden, da eine Skala fehlt. Statt dessen wird das Phasenangeschnittene Signal zunächst 
 		mit dem Oszilloskop gemessen. Dabei wird die Zeitdifferenz zwischen dem
 		Nulldurchgang und Zündmoment gemessen. Anschließend wird das Signal auch mit dem Sensorknoten abgetastet.
-		Es werden Messpunkte bei vielfachen von ca. $2,5ms$ Phasenverschub
+		Es werden Messpunkte bei Vielfachen von ca. $2,5ms$ Phasenverschub
 		aufgenommen.
 		Anschließend wird ein Matlabskript geschrieben, dass den Zündwinkel aus den Messwerten bestimmt.\\ 
-		Um den Leckeffekt von vornerein zu umgehen, wird als Messdauer ein ganzzahliges vielfaches der 
-		Signalperiode ($20ms$) gewählt.\\ 
+		Um den Leckeffekt von vornerein zu umgehen, wird als Messdauer ein
+		ganzzahliges Vielfaches der Signalperiode ($20ms$) gewählt.\\ 
 		Die Abtastfrequenz muss wie folgt gewählt werden. Die $3dB$-Grenzfrequenz des
 		Allaisingfilters liegt bei $3,1kHz$, die Auflösung des ADUs beträgt $10$Bit
 		und der Eingangsspannungsbereich beträgt $14$V.\\
@@ -642,9 +655,9 @@ achten, Vollständigkeit beachten}
 		$230V$ bei $50Hz$. Allerdings können auf der Grundwelle zusätzlich zu den
 		$50Hz$ weitere Oberwellen vorhanden sein. Der Anteil dieser Oberwellen an der
 		Versorgungsspannung darf nicht über $8\%$ liegen.\\
-		Für diesen Versuch wird die Netzspannung an den Spannungswandler der Blauenbox angelegt. 
-		Nun kann mit dem Sensorknoten die Netzspannung gemessen werden. Der Spannungswandler setzt die 
-		Eingangsspannung um den Faktor $56,6$ herab. Um die Netzspannung zu
+		Für diesen Versuch wird die Netzspannung an den Spannungswandler der blauen
+		Box angelegt. Nun kann mit dem Sensorknoten die Netzspannung gemessen werden.
+		Der Spannungswandler setzt die Eingangsspannung um den Faktor $56,6$ herab. Um die Netzspannung zu
 		bestimmen, muss der Messwert mit $56,6$ multipliziert werden.
 		
 		\begin{figure}[htb]
@@ -660,7 +673,7 @@ achten, Vollständigkeit beachten}
 		THD = \frac{\sqrt{U_2^2 + U_3^2 + \cdot \cdot \cdot + U_N^2}}{U_1}
 		\end{align} 
 		
-		Mit diesem Ansatz sollte ein Metzoberschwingungsanalysator auf Basis der DFT
+		Mit diesem Ansatz sollte ein Netzoberschwingungsanalysator auf Basis der DFT
 		realisiert werden. Hierzu wurde eine Messkette entworfen.
 		
 		\TODO{die Ergebisse der TDH Messung fehlt hier}
