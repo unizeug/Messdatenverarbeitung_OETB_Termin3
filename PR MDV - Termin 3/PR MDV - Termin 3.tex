@@ -360,8 +360,8 @@
                 \end{tabular}
                 \end{center}
    
-            Die letzte Simulation zeigt eine Fensterung, die zu dem Leck-Effekt
-            führt. Als Ergebniss ist ein beiteres und flacheres Spektrum zu sehen, wie es beim Leckeffekt zu erwarten war.
+            Die letzte Simmulation zeigt eine Fensterung, die zu dem Leck-Effekt
+            führt. Als Ergebnis ist ein beiteres und flacheres Spektrum zu sehen, wie es beim Leckeffekt zu erwarten war.
     			
 		\end{quote}
 
@@ -640,6 +640,16 @@
 		Der Filter ist ein Filter $8$.Ordnung und besitzt eine Steilheit von
 		$160dB$/Dekade. Es wird abgeschätzt, dass der Filter ab ca. $3,5kHz$ um über
 		$60dB$ dämpft. Daher muss die Abtastfrequenz mindestens $7kHz$ betragen.
+		
+		\TODO{Boris: Bilder reinhauen}
+		
+		\TODO{Özgü: Fensterwahl: Hanning oder Rechteck im Vergleich, da beide
+		Fensterfunktionen ihre pros und cons für die DFT Spektren haben(siehe Skript).
+		Abtastfrequenz 15kHz, da nahezu höchste Auflösung des Messknotens, also größer
+		als 7kHz (num of samples beträgt 600). Wir haben 0.04s aufgenommen, also genau zwei Periodendauer a 20ms. 
+		Länge des Fensters beträgt ein ganzzahliges Vielfaches der Periodenlänge des
+		Signals.}
+		
 		\end{quote}
 		
 		\subsubsection{Auswirkungen des Fensters}
@@ -647,6 +657,12 @@
 		Es werden nun nacheinander Rechteck-, Hanning- und Blackmanfenster über das Signal gelegt. 
 		Die Längen der Fenster sind absichtlich so gewählt, dass es zum Leckeffekt kommt. 
 		Es wird nun untersucht, wie sich die unterschiedlichen Fenster auf den Leckeffekt auswirken. 
+		
+		\TODO{Boris: Bilder reinhauen}
+		
+		\TODO{Özgü: Diese Simmulationen zeigen die Auswirkungen bei Entstehung des
+		Leck-Effekts. Als Ergebnis ist ein beiteres und flacheres Spektrum zu sehen, wie es zu erwarten war.}
+		
 		\end{quote}
 		
 		\subsubsection{Qualität der Netzspannung}
