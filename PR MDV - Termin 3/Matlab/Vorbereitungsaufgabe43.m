@@ -15,10 +15,10 @@ b=0;
 
  
 %Berechnung und plotten des Spektrums des Rechteckfensters
-Spektrum(recht,recht,1,1,1);
+%Spektrum(recht,recht,1,1,1);
 
 %Berechnung und plotten des Spektrums des Hanningfensters
-Spektrum(han,recht,1,1,2); 
+%Spektrum(han,recht,1,1,2); 
  
 %vergrößerung des Zeropaddings
 b=2^20-a;
@@ -33,6 +33,6 @@ b=2^20-a;
 Spektrum(recht2,recht2,1,1,3);
 
 %Berechnung und plotten des Spektrums des Hanningfensters
-Spektrum(han2,recht2,1,1,4); 
+%Spektrum(han2,recht2,1,1,4); 
 
  

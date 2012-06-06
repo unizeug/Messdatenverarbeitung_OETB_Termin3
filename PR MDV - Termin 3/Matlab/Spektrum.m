@@ -31,27 +31,33 @@ ergebnis1 = xt.*wn;
 ergebnis2 = fft(ergebnis1);     
 ergebnis2 = fftshift(ergebnis2);
 N = length(xt);
+N2=sum(wn);
 
 %Betragsspektrum
-BetragXf = abs(ergebnis2)/N;
+BetragXf = abs(ergebnis2)/N2;
 %Phasenspektrum
-PhaseXf = unwrap(angle(ergebnis2)/N);
+PhaseXf = unwrap(angle(ergebnis2)/N2);
 
 
 %Zeitachse
 t = 0 :1/fs : (N-1)/fs;
 length(t)
+
 %Frequenzachse
 %f_DFT = fs*2*(0:(N-1))/(N-1);
 f_DFT = (-N/2+0.5:N/2-0.5)*fs/N;
 %ceil bzw floor als Lösung
 %neues Fenster zur Darstellung
+%clf(fig);
 figure(fig);
 %Darstellung des Zeitsignals
 subplot(3,1,1);
-plot(t,xt);
+hold on
+plot(t,ergebnis1);
+plot(t,wn,'r');
+hold off
 %stem(t,xt);
-%AXIS([-150 150 0 2])
+%AXIS([0 16 0 1]) % Vorbereintungsaufgabe 4.3
  title('Zeitsignal');
  xlabel('t/s');
  ylabel('u/V');
@@ -63,8 +69,8 @@ else
     %plot(f_DFT, BetragXf,'-');
     stem(f_DFT,BetragXf);
 end;
-%AXIS([-300 300 0 0.5])%für die Vorbereitungsaufgabe 2
-%Axis([-0.5 0.5 -0.01 0])%für die Vorbereitungsaufgabe 3
+AXIS([-300 300 0 0.505])%für die Vorbereitungsaufgabe 2
+%Axis([-0.5 0.5 10^(-15) 10^(-5)])%für die Vorbereitungsaufgabe 3
 %ylim ([-30 5])
  title('Amplitudenspektrum');
  xlabel('f/Hz');
@@ -72,8 +78,8 @@ end;
 %Darstellung des Phasenspektrums
 subplot(3,1,3);
 plot(f_DFT, PhaseXf);
-%AXIS([-300 300 -0.015 0.015])%Für die Vorbereitungsaufgabe 2
-%Axis([-0.5 0.5 -0.01 0])%für die Vorbereitungsaufgabe 3
+AXIS([-300 300 -0.015 0.015])%Für die Vorbereitungsaufgabe 2
+%Axis([-0.5 0.5 -4*10^(-6) 4*10^(-6)])%für die Vorbereitungsaufgabe 3
 title('Phasenspektrum');
  xlabel('f/Hz');
  ylabel('phi(f)');

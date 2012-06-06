@@ -3,7 +3,7 @@
 %erstellen eines Sinussignals
 x = 0:0.01:2*pi;
 x = x';
-f = 51;
+f = 50;
 fs = 15000;
 
 t = 0 :1/fs : 2/f;
@@ -22,7 +22,7 @@ wn2 = ones(N,1);
 wn3 = blackman(N);
 
 %erstellen eines kleineren Hanningfensters als das Signal lang ist
-a=150;
+a=300;
 han = hanning(N-a);
 wn11 = zeros(N,1);
  for k =1:N-a
@@ -30,10 +30,10 @@ wn11 = zeros(N,1);
  end;
 
  
- Spektrum(xt, wn1, fs, 0,2);
- Spektrum(xt, wn11,fs, 0,3);
- Spektrum(xt, wn2, fs, 0,4);
- Spektrum(xt, wn3, fs, 0,5);
+ Spektrum(xt, wn1, fs, 0,1);
+ Spektrum(xt, wn11,fs, 0,11);
+ Spektrum(xt, wn2, fs, 0,2);
+ Spektrum(xt, wn3, fs, 0,3);
 
  
  
