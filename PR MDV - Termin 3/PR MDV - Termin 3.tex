@@ -81,7 +81,7 @@
     	\subsubsection{Angeschnittene Sinusfunktion}
         \begin{quote}
             In der zweiten Vorbereitungsaufgabe sollte eine Matlab-Funktion
-            geschrieben werden, die einen angeschnittene Sinusfunktion simuliuliert.\\
+            geschrieben werden, die einen angeschnittene Sinusfunktion simuliert.\\
             Um diese Funktion zu erstellen haben wir eine for Schleife
             imlementiert, die den gesamten Zeitvektor t durchläuft. Für jeden Durchlauf wird getestet, 
             wo sich der jeweilige Zeitpunkt im Verhältniss zum halben
@@ -368,9 +368,9 @@
         \subsubsection{DFT eines Rechteck- und Hanningfenster}
 		\begin{quote}
             Außerdem untersuchten wir die Spektren von einem Hanning- und einem Rechteckfenster, zuerst mit einer
-            Fensterlänge von $16$ und danach mit einer Länge von $2^20$, wobei die restlichen Werte durch Null-Padding
+            Fensterlänge von $16$ und danach mit einer Länge von $2^{20}$, wobei die restlichen Werte durch Null-Padding
             eingefügt wurden.\\
-            Das dazugehörige Skript Vorbereitungsaufgabe43.m befindet sich im Anhang
+            Das dazugehörige Skript Vorbereitungsaufgabe43.m befindet sich im Anhang.\\
             Die Plotts dazu sind hier:
             
                 %4 Grafiken:
@@ -496,15 +496,16 @@
 	\subsection{Amplituden- und Phasenspektrum des Stroms anhand der DFT}
 	\begin{quote}
         In diesem Teil bestand die Aufgabe darin für einen selbst gewählten Anschnittswinkel den Stromverlauf
-        aufzunehmen und das Amplituden sowie das Phasenspektrum aufzunehmen. Es sollte eine passende Abtastfrequenz und
+        zu messen und das Amplituden sowie das Phasenspektrum aufzunehmen. Es sollte eine passende Abtastfrequenz und
         ein passendes Messfenster gewählt werden. Außerdem sollte der Einfluss des Antialiasing-Filters auf den
         Betragsfrequenzgang korrigiert werden.\\
         Für unsere Messung haben wir uns entschieden, mit einer Abtastfrequenz
         von $15kHz$ und einem Messfenster von $600$ Messwerten abzutasten. Die
         Abtastfrequenz haben wir gewählt, da sie fast die maximal mögliche Abtastfrequenz des Messknotens ist und wir mit 
-        mehr Abtastwerten eine größere Genauigkeit erreichen. 
-        Als Zeitfenster haben wir zwei Perioden gewählt, was bei einer Frequenz von $50Hz$ ein Zeitfenster von $0$ bis
-        $0.04 s$ bedeutet. Bei der gewählten Abtastfrequenz ergibt sich daraus ein Messfenster von $600$
+        mehr Abtastwerten eine größere Genauigkeit erreichen. Außerdem verhindern wir mit dieser Abtastfrequenz
+        Aliasing.\\
+        Als Zeitfenster haben wir zwei Perioden gewählt, was bei einer Frequenz von $50Hz$ ein Zeitfenster
+        von $0$ bis $0.04 s$ bedeutet. Bei der gewählten Abtastfrequenz ergibt sich daraus ein Messfenster von $600$
         Messwerten.
         
         \vspace{1em}
@@ -597,7 +598,7 @@
 	\subsection{Versuchsaufbau}
 	\begin{quote}
     	Allgemein gilt: Um Strom zu messen muss man ein Amperemeter in Reihe mit der Last schalten. 
-    	Daher muss auch hier der Stromwandler aus der "blauen Box" in Reihe zur Last geschaltet 
+    	Daher muss auch hier der Stromwandler aus der "blauen Box" \ in Reihe zur Last geschaltet 
     	werden. Das in eine Spannung gewandelte und gefilterte Signal wird mit dem Sensorknoten gemessen. 
     	Das Messsignal wird anschließend mit Matlab weiterverarbeitet.
     
@@ -713,10 +714,10 @@
             \end{figure}
     
             Im Vergleich mit der Simulation aus den Vorbereitungsaufgaben von Termin 3, fällt auf, dass die klaren
-            Spektrallinien stark verlaufen sind. Der Leckeffekt ist also trotz Fenster aufgetreten. Dies liegt daran,
-            dass alle Fensterfunktionen, außer dem Rechteckfenster, das Amplitudenspektrum verlaufen lassen.\\
-            Da das Fenster relativ genau 2 Perioden des Messsignals beträgt, kann mit dem Rechteckfenster ein wesendlich
-            genaueres Spektrum bestimmt werden.\\
+            Spektrallinien stark verlaufen sind. Dies resultiert aus der Fesnsterwahl. Alle Fensterfunktionen, außer dem
+            Rechteckfenster, lassen das Amplitudenspektrum verlaufen lassen.\\
+            Da das Fenster relativ genau 2 Perioden des Messsignals beträgt, kann jedoch mit dem Rechteckfenster ein
+            wesendlich genaueres Spektrum bestimmt werden.\\
             
             \begin{figure}[H]
             \centering
@@ -727,7 +728,7 @@
             
             Wenn das zu messende Signal eine konstante, bekannte Periode besitzt, ist es vorteilhaft ein Rechteckfenster
             zu verwenden. Das Signal kann seine form dabei beliebig verändern. Sollte die Periode des Signals nicht
-            konstant sein ist es aber besser eine Fensterfunktion zu verwenden um den Leckeffekt zumindest zu
+            konstant sein ist es aber besser eine andere Fensterfunktion zu verwenden um den Leckeffekt zumindest zu
             verringern.
 
          \end{quote} % Ende Subsubsection
