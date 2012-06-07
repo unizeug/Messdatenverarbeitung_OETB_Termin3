@@ -596,82 +596,74 @@
 	
 	\subsection{Versuchsaufbau}
 	\begin{quote}
-	Allgemein gilt: Um Strom zu messen muss man ein Amperemeter in Reihe mit der Last schalten. 
-	Daher muss auch hier der Stromwandler aus der "blauen Box" in Reihe zur Last geschaltet 
-	werden. Das in eine Spannung gewandelte und gefilterte Signal wird mit dem Sensorknoten gemessen. 
-	Das Messsignal wird anschließend mit Matlab weiterverarbeitet.
-
-	\begin{figure}[htb]
-	\centering
-	\includegraphics[scale=0.6,  trim = 0cm 0cm 0cm 0cm,clip]{./Bilder/Versuchsaufbau1}
-	\caption{Versuchsaubau um angeschnittenen Strom zu messen}
-	\end{figure}
-	
+    	Allgemein gilt: Um Strom zu messen muss man ein Amperemeter in Reihe mit der Last schalten. 
+    	Daher muss auch hier der Stromwandler aus der "blauen Box" in Reihe zur Last geschaltet 
+    	werden. Das in eine Spannung gewandelte und gefilterte Signal wird mit dem Sensorknoten gemessen. 
+    	Das Messsignal wird anschließend mit Matlab weiterverarbeitet.
+    
+    	\begin{figure}[htb]
+        	\centering
+        	\includegraphics[scale=0.6,  trim = 0cm 0cm 0cm 0cm,clip]{./Bilder/Versuchsaufbau1}
+        	\caption{Versuchsaubau um angeschnittenen Strom zu messen}
+    	\end{figure}	
 	\end{quote}
-		
+	
 	\subsection{Versuchsdurchführung}
 	\begin{quote}
-		
-		\subsubsection{Phasenanschnitt messen}
+		        
+		\subsubsection{Spektrum mit Fensterung}
 		\begin{quote}
-		An dem Phasenanschnittdimmer wird ein Zündwinkel eingestellt. Dieser kann aber nicht am Dimmer 
-		bestimmt werden, da eine Skala fehlt. Statt dessen wird das Phasenangeschnittene Signal zunächst 
-		mit dem Oszilloskop gemessen. Dabei wird die Zeitdifferenz zwischen dem
-		Nulldurchgang und Zündmoment gemessen. Anschließend wird das Signal auch mit dem Sensorknoten abgetastet.
-		Es werden Messpunkte bei Vielfachen von ca. $2,5ms$ Phasenverschub
-		aufgenommen.
-		Anschließend wird ein Matlabskript geschrieben, dass den Zündwinkel aus den Messwerten bestimmt.\\ 
-		Um den Leckeffekt von vornerein zu umgehen, wird als Messdauer ein
-		ganzzahliges Vielfaches der Signalperiode ($20ms$) gewählt.\\ 
-		Die Abtastfrequenz muss wie folgt gewählt werden. Die $3dB$-Grenzfrequenz des
-		Allaisingfilters liegt bei $3,1kHz$, die Auflösung des ADUs beträgt $10$Bit
-		und der Eingangsspannungsbereich beträgt $14$V.\\
+            An dem Phasenanschnittdimmer wird ein Zündwinkel eingestellt. Dieser kann aber nicht am Dimmer bestimmt
+            werden, da eine Skala fehlt. Statt dessen wird das Phasenangeschnittene Signal zunächst mit dem Ossziloskop
+            gemessen.
+            Dabei wird die Zeitdifferenz zwischen dem Nulldurchgang und Zündmoment gemessen. Anschließend wird das
+            Signal auch mit dem Sensorknoten abgetastet.\\
+            Um den Leckeffekt von vornerein zu umgehen, wird als Messdauer ein ganzzahliges vielfaches der Signalperiode
+            (20ms) gewählt.\\
+            Die Abtastfrequenz muss wie folgt gewählt werden.
+            Die 3dB-Grenzfrequenz des Allaisingfilters liegt bei 2,05kHz, die Auflösung des ADUs beträgt 10Bit und der
+            Eingangsspannungsbereich beträgt 14V.\\
+            
+            \begin{align}
+                U_{LSB} = \frac{14V}{2^{10}-1} = 0,01368V 
+            \end{align} 
 		
-		\begin{align}
-		U_{LSB} = \frac{14V}{2^{10}-1} = 0,01368V 
-		\end{align} 
+		    Nun kann die benötigte Dämpfung, um Allaising zu verhindern, berechnet werden.\\
 		
-		Nun kann die benötigte Dämpfung, um Allaising zu verhindern, berechnet werden.\\
+            \begin{align}
+                D = 20 \cdot log_{10}(\frac{14V}{U_{LSB}}) = 60dB
+            \end{align} 
 		
-		\begin{align}
-		D = 20 \cdot log_{10}(\frac{14V}{U_{LSB}}) = 60dB
-		\end{align} 
-		
-		Der Filter ist ein Filter $8$.Ordnung und besitzt eine Steilheit von
-		$160dB$/Dekade. Es wird abgeschätzt, dass der Filter ab ca. $3,5kHz$ um über
-		$60dB$ dämpft. Daher muss die Abtastfrequenz mindestens $7kHz$ betragen.
-		
-		\TODO{Boris: Bilder reinhauen}
-		
-		\TODO{Özgü: Fensterwahl: Hanning oder Rechteck im Vergleich, da beide
-		Fensterfunktionen ihre pros und cons für die DFT Spektren haben(siehe Skript).
-		Abtastfrequenz 15kHz, da nahezu höchste Auflösung des Messknotens, also größer
-		als 7kHz (num of samples beträgt 600). Wir haben 0.04s aufgenommen, also genau zwei Periodendauer a 20ms. 
-		Länge des Fensters beträgt ein ganzzahliges Vielfaches der Periodenlänge des
-		Signals.}
+            Der Filter ist ein Filter 8.Ordnung und besitzt eine Steilheit von 160dB/Dekade. Es wird abgeschätzt, dass
+            der Filter ab ca.7kHz um über 60dB dämpft. Daher muss die Abtastfrequenz mindestens 14kHz betragen.
+
+    		
+    		\TODO{Özgü: Fensterwahl: Hanning oder Rechteck im Vergleich, da beide
+    		Fensterfunktionen ihre pros und cons für die DFT Spektren haben(siehe Skript).
+    		Abtastfrequenz 15kHz, da nahezu höchste Auflösung des Messknotens, also größer
+    		als 7kHz (num of samples beträgt 600). Wir haben 0.04s aufgenommen, also genau zwei Periodendauer a 20ms. 
+    		Länge des Fensters beträgt ein ganzzahliges Vielfaches der Periodenlänge des
+    		Signals.}
 		
 		\end{quote}
 		
 		\subsubsection{Auswirkungen des Fensters}
 		\begin{quote}
+		  Es werden nun nacheinander Rechteck-, Hanning- und Blackmanfenster über das Signal gelegt. Die Längen der Fenster
+		  sind absichtlich so gewählt, dass es zum Leckeffekt kommt. Es wird nun untersucht, wie sich die unterschiedlichen
+		  Fenster auf den Leckeffekt auswirken.
 		\TODO{hier ist nur ein Spektrum, sollen wir schreiben, dass wir die anderen
 		Fensterfunktionen nicht weiter untersucht haben?} 
+
 		
-		Es werden nun nacheinander Rechteck-, Hanning- und Blackmanfenster über das
-		Signal gelegt. Die Längen der Fenster sind absichtlich so gewählt, dass es zum
-		Leckeffekt kommt.Es wird nun untersucht, wie sich die unterschiedlichen
-		Fenster auf den Leckeffekt auswirken.
+    		\begin{figure}[H]
+            \centering
+                \includegraphics[scale=0.6, trim = 1.5cm 7cm 1.5cm 8.5cm,
+                clip]{./Bilder/Phasenanschnittsmessungmithanningfensterleckeffekt}
+                    \caption{Phasenanschnittsmessung mit zu kurzem Hanningfenster}
+            \end{figure}
 		
-		\begin{figure}[H]
-        \centering
-            \includegraphics[scale=0.6, trim = 1.5cm 7cm 1.5cm 8.5cm,
-            clip]{./Bilder/Phasenanschnittsmessungmithanningfensterleckeffekt}
-                \caption{Phasenanschnittsmessung mit zu kurzem Hanningfenster}
-        \end{figure}
-    
-		
-		
-		\TODO{Boris: Bilder reinhauen}
+		\TODO{Boris: Bilder reinhauen wieviele willst du Özgü?}
 		
 		Diese Simmulation zeigt die Auswirkungen bei Entstehung des
 		Leck-Effekts bei einem zu kurz gewählten Hanningfenster. Als Ergebnis ist ein
@@ -731,12 +723,12 @@
 		Der Spannungswandler setzt die Eingangsspannung um den Faktor $56,6$ herab. Um die Netzspannung zu
 		bestimmen, muss der Messwert mit $56,6$ multipliziert werden.
 		
-		\begin{figure}[htb]
-		\centering
-		\includegraphics[scale=0.6, trim = 0cm 0cm 0cm 0cm,
-            clip]{./Bilder/Versuchsaufbau2}
-		\caption{Versuchsaubau um Netzqualität zu messen}
-		\end{figure}
+    		\begin{figure}[htb]
+        		\centering
+        		\includegraphics[scale=0.6, trim = 0cm 0cm 0cm 0cm,
+                    clip]{./Bilder/Versuchsaufbau2}
+        		\caption{Versuchsaubau um Netzqualität zu messen}
+    		\end{figure}
 	
 		Von dem aufgezeichenteten Verlauf des phasenangeschnittetenen Stroms soll das Frequenz- und das Phasenspektrum 
 		bestimmt werden. Bei der Auswertung ist darauf zu achten, dass das Spektrum nicht durch schlechte Wahl des Fensters 
