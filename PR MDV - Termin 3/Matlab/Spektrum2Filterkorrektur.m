@@ -119,7 +119,7 @@ else
 end;
 %AXIS([-300 300 0 0.5])%für die Vorbereitungsaufgabe 2
 %Axis([-0.5 0.5 -0.01 0])%für die Vorbereitungsaufgabe 3
-%Axis([-450 450 0 0.2])%Praxisaufgabe 41
+Axis([-450 450 0 0.2])%Praxisaufgabe 41
 %Axis([-450 450 0 0.3])%Praxisaufgabe 43
 %ylim ([-30 5])
  title('Amplitudenspektrum');
