@@ -43,13 +43,9 @@ wn1 = hanning(N);
 wn2 = ones(N,1);
 wn3 = blackman(N);
 
-%Betragsspektrum1 = Spektrum(xt, wn1, fs, 0, 1);
-%Spektrum(xt, wn2, fs, 0, 2);
 
 Betragsspektrum2 = Spektrum2Filterkorrektur(xt,wn2,fs,h2,0,2);
 %Betragsspektrum2 = Spektrum(xt, wn3, fs, 0, 3);
-
-%n = length(Be
 
 %Gesamtoberschwingungsgehalt (THD-Wert)
 THD = (sqrt(sum(Betragsspektrum2.^2) - Betragsspektrum2(303)^2 - Betragsspektrum2(299)^2))/(Betragsspektrum2(303)^2 + Betragsspektrum2(299)^2);
