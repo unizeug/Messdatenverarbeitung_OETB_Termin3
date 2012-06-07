@@ -636,14 +636,6 @@
 		
             Der Filter ist ein Filter 8.Ordnung und besitzt eine Steilheit von 160dB/Dekade. Es wird abgeschätzt, dass
             der Filter ab ca.7kHz um über 60dB dämpft. Daher muss die Abtastfrequenz mindestens 14kHz betragen.
-
-    		
-    		\TODO{Özgü: Fensterwahl: Hanning oder Rechteck im Vergleich, da beide
-    		Fensterfunktionen ihre pros und cons für die DFT Spektren haben(siehe Skript).
-    		Abtastfrequenz 15kHz, da nahezu höchste Auflösung des Messknotens, also größer
-    		als 7kHz (num of samples beträgt 600). Wir haben 0.04s aufgenommen, also genau zwei Periodendauer a 20ms. 
-    		Länge des Fensters beträgt ein ganzzahliges Vielfaches der Periodenlänge des
-    		Signals.}
 		
 		\end{quote}
 		
@@ -743,14 +735,7 @@
         \subsubsection{Verkürztes Fenster }
 
 		\begin{quote}
-			         \begin{figure}[H]
-            \centering
-                \includegraphics[scale=0.6, trim = 1.5cm 7cm 1.5cm 8.5cm,
-                clip]{./Bilder/Phasenanschnittsmessungmithanningfensterleckeffekt}
-                    \caption{Phasenanschnittsmessung mit zu kurzem Hanningfenster}
-            \end{figure}
-        
-        \TODO{Boris: Bilder reinhauen wieviele willst du Özgü?}
+			         
 
 		\begin{quote}        
                                     %4 Grafiken:
@@ -783,6 +768,14 @@
                 \end{tabular}
                 \end{center}
                 
+                An dem Vergleich zwischen einem Hanningfenster mit passender
+                Länge und eine zu kurzen Hanningfenster, sieht man nun die
+                Auswirkungen des Leckeffekts. Obwohl die Nebenzipfel eines
+                Hanningfensters im Frequenzbereich relativ zügig abfallen, wirkt
+                sich der Leckeffekt so aus, dass die Amplitude breiter wird. Sie
+                müsste auch flacher werden, was wir in unserem Plot leider nicht
+                so deutlich sehen können.
+                
                 \begin{center}
                 \begin{tabular}{ll}
     
@@ -812,6 +805,16 @@
                 \end{tabular}
                 \end{center}                
         
+        		Die Verwendung eines Rechteckfensters ist dann sehr vorteilhaft, wenn
+        		wir ausschließen können, dass die Fensterlänge nicht einem
+        		ganzzahligen Vielfachen der Signalperiode entspricht. Sobald dies aber
+        		der Fall ist, ist der Leckeffekt durch das Rechteckfenster am
+        		stärksten, da die Nebenzipfel des Spektrums eines Rechtecks im
+        		Frequenzbereich sehr langsam gedämpft werden. Daher sieht man auch im
+        		Vergleich dieser zwei Plots, dass die Amplitude im Spektrum
+        		deutlich breiter wird. Wieder kann man keine genaue Aussage über die
+        		Entwicklung Amplitudenhöhe machen.
+        		
                 \begin{center}
                 \begin{tabular}{ll}
     
@@ -840,12 +843,16 @@
     
                 \end{tabular}
                 \end{center}
+                
+                Zuletzt wird der Leckeffek bei einem Blackmanfenster untersucht.
+                Dieser dürfte nicht so stark ausfallen, wie bei den beiden
+                anderen untersuchten Fensterfunktionen, da die Nebenzipfel im
+                Frequenzbereich des Blackmanfensters am steilsten abfallen.
+                Daher kann man im Vergleich der beiden Plots zum Blackmanfenster
+                auch den geringsten Unterschied sehen. 
+                
                 \vspace{1em}
 
-        
-        Diese Simmulation zeigt die Auswirkungen bei Entstehung des
-        Leck-Effekts bei einem zu kurz gewählten Hanningfenster. Als Ergebnis ist ein
-        etwas breiteres und flacheres Spektrum zu sehen, wie es zu erwarten war.
 		\end{quote} % Ende Subsubsection
          
         \subsubsection{Netzqualität bestimmen}
